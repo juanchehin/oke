@@ -1,4 +1,6 @@
-﻿using System;
+﻿using oke.Datos;
+using oke.Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +38,41 @@ namespace oke.Presentacion
             {
                 Icono.BackgroundImage = null;
                 Icono.Image = new Bitmap(dlg.FileName);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text != "")
+            {
+                if (txtPass.Text != "")
+                {
+                    insertar_usuario();
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese una Contraseña", "Sin Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un Usuario", "Sin Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void insertar_usuario()
+        {
+            lusuarios dt = new lusuarios();
+            dusuarios funcion = new dusuarios();
+            dt.Usuario = txtUsuario.Text;
+            dt.Pass = txtPass.Text;
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            Icono.Image.Save(ms, Icono.Image.RawFormat);
+            dt.Icono = ms.GetBuffer();
+            dt.Estado = "ACTIVO";
+            if (funcion.insertar(dt))
+            {
+                MessageBox.Show("Usuario Registrado", "Registro Correcto");
             }
         }
     }

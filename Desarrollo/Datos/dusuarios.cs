@@ -20,7 +20,7 @@ namespace oke.Datos
             try
             {
                 ConexionMaestra.abrir();
-                SqlCommand cmd = new SqlCommand("insertar_usuarios", ConexionMaestra.conexion);
+                SqlCommand cmd = new SqlCommand("insertar_usuario", ConexionMaestra.conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Usuario", dt.Usuario);
                 cmd.Parameters.AddWithValue("@Pass", dt.Pass);
