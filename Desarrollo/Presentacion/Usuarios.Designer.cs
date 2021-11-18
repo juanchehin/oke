@@ -39,15 +39,16 @@ namespace oke.Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelUsuario = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnGuardarCambios = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textUsuario = new System.Windows.Forms.TextBox();
-            this.textPass = new System.Windows.Forms.TextBox();
-            this.Icono = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Icono = new System.Windows.Forms.PictureBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -141,8 +142,8 @@ namespace oke.Presentacion
             // 
             this.panelUsuario.Controls.Add(this.label4);
             this.panelUsuario.Controls.Add(this.Icono);
-            this.panelUsuario.Controls.Add(this.textPass);
-            this.panelUsuario.Controls.Add(this.textUsuario);
+            this.panelUsuario.Controls.Add(this.txtPass);
+            this.panelUsuario.Controls.Add(this.txtUsuario);
             this.panelUsuario.Controls.Add(this.label3);
             this.panelUsuario.Controls.Add(this.label2);
             this.panelUsuario.Controls.Add(this.btnVolver);
@@ -154,42 +155,40 @@ namespace oke.Presentacion
             this.panelUsuario.TabIndex = 2;
             this.panelUsuario.Visible = false;
             // 
-            // btnGuardar
+            // label4
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(46, 251);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(162, 116);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Icono";
             // 
-            // btnGuardarCambios
+            // Icono
             // 
-            this.btnGuardarCambios.Location = new System.Drawing.Point(181, 251);
-            this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.Size = new System.Drawing.Size(125, 23);
-            this.btnGuardarCambios.TabIndex = 1;
-            this.btnGuardarCambios.Text = "Guardar Cambios";
-            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.Icono.Image = ((System.Drawing.Image)(resources.GetObject("Icono.Image")));
+            this.Icono.Location = new System.Drawing.Point(166, 143);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(128, 102);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 7;
+            this.Icono.TabStop = false;
+            this.Icono.Click += new System.EventHandler(this.Icono_Click);
             // 
-            // btnVolver
+            // txtPass
             // 
-            this.btnVolver.Location = new System.Drawing.Point(357, 251);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 2;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.txtPass.Location = new System.Drawing.Point(166, 74);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(159, 20);
+            this.txtPass.TabIndex = 6;
             // 
-            // label2
+            // txtUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Usuario";
+            this.txtUsuario.Location = new System.Drawing.Point(166, 26);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(159, 20);
+            this.txtUsuario.TabIndex = 5;
             // 
             // label3
             // 
@@ -201,39 +200,46 @@ namespace oke.Presentacion
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña";
             // 
-            // textUsuario
+            // label2
             // 
-            this.textUsuario.Location = new System.Drawing.Point(166, 26);
-            this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(159, 20);
-            this.textUsuario.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Usuario";
             // 
-            // textPass
+            // btnVolver
             // 
-            this.textPass.Location = new System.Drawing.Point(166, 74);
-            this.textPass.Name = "textPass";
-            this.textPass.Size = new System.Drawing.Size(159, 20);
-            this.textPass.TabIndex = 6;
+            this.btnVolver.Location = new System.Drawing.Point(357, 251);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 2;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
             // 
-            // Icono
+            // btnGuardarCambios
             // 
-            this.Icono.Image = ((System.Drawing.Image)(resources.GetObject("Icono.Image")));
-            this.Icono.Location = new System.Drawing.Point(166, 143);
-            this.Icono.Name = "Icono";
-            this.Icono.Size = new System.Drawing.Size(128, 102);
-            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Icono.TabIndex = 7;
-            this.Icono.TabStop = false;
+            this.btnGuardarCambios.Location = new System.Drawing.Point(181, 251);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(125, 23);
+            this.btnGuardarCambios.TabIndex = 1;
+            this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // btnGuardar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(162, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 24);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Icono";
+            this.btnGuardar.Location = new System.Drawing.Point(46, 251);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
             // 
             // Usuarios
             // 
@@ -274,12 +280,13 @@ namespace oke.Presentacion
         private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox Icono;
-        private System.Windows.Forms.TextBox textPass;
-        private System.Windows.Forms.TextBox textUsuario;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.OpenFileDialog dlg;
     }
 }
