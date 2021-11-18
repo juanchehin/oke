@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KaraokeApp.Vistas.Pedidos" BackgroundColor="#121212">
+    <ContentPage.ToolbarItems >
+        
+        <ToolbarItem Text="Luxor"
+                     Order="Primary"/>
+        <ToolbarItem Text="Acerca de" x:Name="btnAcercade"
+                     Order="Secondary"
+                     Clicked="btnAcercade_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Frame  Grid.Row="0" Grid.ColumnSpan="2"
+                     Grid.RowSpan="2"  CornerRadius="10"
+                        Margin="5,0,5,0">
+                    <Frame.Background>
+                    
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#f46b45"
+                          Offset="0.1" />
+                            <GradientStop Color="#eea849"
+                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                </Frame>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" TextColor="White"
+                       Text="Elija una cancion y luego escanee el codigo QR de su mesa" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+                <Entry Grid.Row="1" Grid.Column="0"
+                       TextColor="White" Placeholder="Buscar..."
+                       PlaceholderColor="WhiteSmoke"
+                       Margin="8,0,0,0"
+                       x:Name="txtBuscar" PropertyChanged="txtBuscar_PropertyChanged"
+                       FontAttributes="Bold" />
+                <Button Grid.Row="1" Grid.Column="1"
+                        Text="Cumpleaños" BackgroundColor="#F46D44" 
+                        FontAttributes="Bold" TextColor="White" CornerRadius="10" 
+                       x:Name="btnFelizcumple" Margin="0,0,10,4"
+                        Clicked="btnFelizcumple_Clicked"/>
+            </Grid>
+            <ListView Grid.Row="1" x:Name="PanelCanciones"
+                      IsPullToRefreshEnabled="False"
+                      SeparatorColor="Transparent"
+                      >
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Button Grid.Column="0" x:Name="btnPedir"
+                                        BackgroundColor="#181818"
+                                        VerticalOptions="CenterAndExpand"
+                                        HeightRequest="38"
+                                        WidthRequest="38"
+                                        CornerRadius="19"
+                                        Text="+"
+                                        TextColor="#FF7F00"
+                                        Margin="2"
+                                        CommandParameter="{Binding IdCancion}"
+                                        Clicked="btnPedir_ClickedAsync"/>
+                                <Label Grid.Column="1" TextColor="White"
+                                       Text="{Binding Nombre}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
