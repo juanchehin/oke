@@ -19,9 +19,18 @@ namespace oke.Presentacion
             InitializeComponent();
         }
 
+        private void mostrar_usuarios()
+        {
+            DataTable dt;
+            dusuarios funcion = new dusuarios();
+            dt = funcion.mostrar_usuarios();
+            dataListado.DataSource = dt;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             panelUsuario.Visible = true;
+            panelUsuario.Dock = DockStyle.Fill;
             btnGuardar.Visible = true;
             btnGuardarCambios.Visible = false;
             txtUsuario.Clear();
@@ -48,6 +57,7 @@ namespace oke.Presentacion
                 if (txtPass.Text != "")
                 {
                     insertar_usuario();
+                    mostrar_usuarios();
                 }
                 else
                 {
@@ -73,7 +83,14 @@ namespace oke.Presentacion
             if (funcion.insertar(dt))
             {
                 MessageBox.Show("Usuario Registrado", "Registro Correcto");
+                panelUsuario.Visible = false;
+                panelUsuario.Dock = DockStyle.None;
             }
+        }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+            mostrar_usuarios();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace oke.Presentacion
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataListado = new System.Windows.Forms.DataGridView();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Icono = new System.Windows.Forms.PictureBox();
@@ -52,7 +52,7 @@ namespace oke.Presentacion
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.SuspendLayout();
@@ -130,13 +130,14 @@ namespace oke.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuarios";
             // 
-            // dataGridView1
+            // dataListado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(217, 200);
-            this.dataGridView1.TabIndex = 1;
+            this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataListado.Location = new System.Drawing.Point(0, 127);
+            this.dataListado.Name = "dataListado";
+            this.dataListado.Size = new System.Drawing.Size(800, 323);
+            this.dataListado.TabIndex = 1;
             // 
             // panelUsuario
             // 
@@ -248,19 +249,20 @@ namespace oke.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelUsuario);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataListado);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
@@ -277,7 +279,7 @@ namespace oke.Presentacion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListado;
         private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox Icono;

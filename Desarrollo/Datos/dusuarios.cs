@@ -48,5 +48,34 @@ namespace oke.Datos
 
         }
 
+        public DataTable mostrar_usuarios()
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                cmd = new SqlCommand("mostrar_usuarios", ConexionMaestra.conexion);
+
+                if (cmd.ExecuteNonQuery() != 0)
+                {
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    return dt;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
     }
 }
