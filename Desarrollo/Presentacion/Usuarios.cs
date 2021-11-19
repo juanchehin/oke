@@ -1,13 +1,9 @@
 ﻿using oke.Datos;
 using oke.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.IO;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace oke.Presentacion
@@ -18,6 +14,7 @@ namespace oke.Presentacion
         {
             InitializeComponent();
         }
+        int idusuario;
 
         private void mostrar_usuarios()
         {
@@ -91,6 +88,31 @@ namespace oke.Presentacion
         private void Usuarios_Load(object sender, EventArgs e)
         {
             mostrar_usuarios();
+        }
+
+        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == this.dataListado.Columns["Editar"].Index)
+            {
+                idusuario = Convert.ToInt32(dataListado.SelectedCells[2].Value.ToString());
+                txtUsuario.Text = dataListado.SelectedCells[3].Value.ToString();
+                txtPass.Text = dataListado.SelectedCells[4].Value.ToString();
+                Icono.BackgroundImage = null;
+                byte[] b = (Byte[])dataListado.SelectedCells[5].Value;
+                MemoryStream ms = new MemoryStream(b);
+                Icono.Image = Image.FromStream(ms);
+
+                panelUsuario.Visible = true;
+                panelUsuario.Dock = DockStyle.Fill;
+                btnGuardar.Visible = false;
+                btnGuardarCambios.Visible = true;
+            }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            panelUsuario.Visible = false;
+            panelUsuario.Dock = DockStyle.None;
         }
     }
 }
