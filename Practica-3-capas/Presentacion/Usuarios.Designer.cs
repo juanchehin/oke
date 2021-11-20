@@ -35,9 +35,11 @@ namespace oke.Presentacion
             this.btnInsertar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataListado = new System.Windows.Forms.DataGridView();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Icono = new System.Windows.Forms.PictureBox();
@@ -49,8 +51,6 @@ namespace oke.Presentacion
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,7 +76,7 @@ namespace oke.Presentacion
             this.panel2.Controls.Add(this.btnInsertar);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtBuscador);
             this.panel2.Location = new System.Drawing.Point(3, 79);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(794, 84);
@@ -113,13 +113,16 @@ namespace oke.Presentacion
             this.panel3.Size = new System.Drawing.Size(280, 1);
             this.panel3.TabIndex = 3;
             // 
-            // textBox1
+            // txtBuscador
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(9, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 13);
-            this.textBox1.TabIndex = 2;
+            this.txtBuscador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscador.Location = new System.Drawing.Point(9, 14);
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(281, 13);
+            this.txtBuscador.TabIndex = 2;
+            this.txtBuscador.Click += new System.EventHandler(this.txtBuscador_TextChanged);
+            this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
+            this.txtBuscador.Enter += new System.EventHandler(this.txtBuscador_Enter);
             // 
             // label1
             // 
@@ -146,6 +149,20 @@ namespace oke.Presentacion
             this.dataListado.Size = new System.Drawing.Size(800, 323);
             this.dataListado.TabIndex = 1;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.Name = "Editar";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
             // 
             // panelUsuario
             // 
@@ -237,6 +254,7 @@ namespace oke.Presentacion
             this.btnGuardarCambios.TabIndex = 1;
             this.btnGuardarCambios.Text = "Guardar Cambios";
             this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // btnGuardar
             // 
@@ -251,20 +269,6 @@ namespace oke.Presentacion
             // dlg
             // 
             this.dlg.FileName = "openFileDialog1";
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Editar.Name = "Editar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.Name = "Eliminar";
             // 
             // Usuarios
             // 
@@ -300,7 +304,7 @@ namespace oke.Presentacion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.DataGridView dataListado;
         private System.Windows.Forms.Panel panelUsuario;

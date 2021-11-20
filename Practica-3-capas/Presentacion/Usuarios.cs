@@ -92,9 +92,23 @@ namespace oke.Presentacion
 
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == this.dataListado.Columns["Editar"].Index)
+            idusuario = Convert.ToInt32(dataListado.SelectedCells[2].Value.ToString());
+            MessageBox.Show("Pasa 0", "Pasa 0");
+
+            if (e.ColumnIndex == this.dataListado.Columns["Eliminar"].Index)
             {
-                idusuario = Convert.ToInt32(dataListado.SelectedCells[2].Value.ToString());
+                MessageBox.Show("Pasa", "Pasa");
+                DialogResult result;
+                result = MessageBox.Show("¿Realmente desea eliminar el registro?","Eliminando registro",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    eliminar_usuario();
+                    mostrar_usuarios();
+                }
+            }
+
+            if (e.ColumnIndex == this.dataListado.Columns["Editar"].Index)
+            {
                 txtUsuario.Text = dataListado.SelectedCells[3].Value.ToString();
                 txtPass.Text = dataListado.SelectedCells[4].Value.ToString();
                 Icono.BackgroundImage = null;
@@ -113,6 +127,68 @@ namespace oke.Presentacion
         {
             panelUsuario.Visible = false;
             panelUsuario.Dock = DockStyle.None;
+        }
+
+        private void editar_usuario()
+        {
+            lusuarios dt = new lusuarios();
+            dusuarios funcion = new dusuarios();
+
+            dt.Idusuario = idusuario;
+            dt.Usuario = txtUsuario.Text;
+            dt.Pass = txtPass.Text;
+
+            MemoryStream ms = new MemoryStream();
+            Icono.Image.Save(ms, Icono.Image.RawFormat);
+            dt.Icono = ms.GetBuffer();
+            dt.Estado = "ACTIVO";
+            if (funcion.editar(dt))
+            {
+                MessageBox.Show("Usuario Modificado", "Registro Correcto");
+                panelUsuario.Visible = false;
+                panelUsuario.Dock = DockStyle.None;
+            }
+        }
+
+        private void eliminar_usuario()
+        {
+            lusuarios dt = new lusuarios();
+            dusuarios funcion = new dusuarios();
+
+            dt.Idusuario = idusuario;
+
+            if (funcion.eliminar_usuarios(dt))
+            {
+                MessageBox.Show("Usuario Eliminado", "Eliminacion Correcto");
+                panelUsuario.Visible = false;
+                panelUsuario.Dock = DockStyle.None;
+            }
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            editar_usuario();
+            mostrar_usuarios();
+        }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("entrea buscar");
+            buscar_usuarios();
+        }
+        private void buscar_usuarios()
+        {
+            MessageBox.Show("entrea buscar 1");
+            DataTable dt;
+            dusuarios funcion = new dusuarios();
+            dt = funcion.buscar_usuarios(txtBuscador.Text);
+            dataListado.DataSource = dt;
+        }
+
+        private void txtBuscador_Enter(object sender, EventArgs e)
+        {
+            MessageBox.Show("entrea enter");
+            buscar_usuarios();
         }
     }
 }
