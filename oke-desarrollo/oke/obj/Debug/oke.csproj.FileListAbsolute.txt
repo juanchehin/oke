@@ -1,0 +1,10 @@
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\oke.exe.config
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\oke.exe
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\oke.pdb
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.AssemblyReference.cache
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.MenuPrincipal.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Properties.Resources.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.GenerateResource.cache
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.CoreCompileInputs.cache
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.exe
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.pdb
