@@ -94,5 +94,43 @@ namespace KaraokeCurso.Datos
 				ConexionMaestra.cerrar();
 			}
 		}
+		public void TotalCanciones(ref int Total)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlCommand cmd = new SqlCommand("select count(IdCancion) from Canciones", ConexionMaestra.conectar);
+				Total = Convert.ToInt32(cmd.ExecuteScalar());
+			}
+			catch (Exception)
+			{
+				Total = 0;
+
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
+		public bool EliminarTodasCanciones()
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlCommand cmd = new SqlCommand("delete from Canciones", ConexionMaestra.conectar);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+				return false;
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
+
 	}
 }

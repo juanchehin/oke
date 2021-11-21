@@ -1,14 +1,13 @@
-﻿using KaraokeCurso.Datos;
-using oke.Logica;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using oke.Logica;
 using System.Windows.Forms;
+using KaraokeCurso.Datos;
+using oke.Datos;
 
 namespace oke.Presentacion
 {
@@ -19,8 +18,9 @@ namespace oke.Presentacion
             InitializeComponent();
         }
         string[] archivo;
-        int TotalCanciones;
+        int vTotalCanciones;
         int Idcancion;
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             OpenFileDialog Opd = new OpenFileDialog();
@@ -48,11 +48,52 @@ namespace oke.Presentacion
             funcion.MostrarCanciones(ref dt);
             dataListado.DataSource = dt;
             OcultarColumnas();
-            // Total();
+            Total();
         }
         private void OcultarColumnas()
         {
-            //datalistado.Columns[1].Visible = false;
+            dataListado.Columns[1].Visible = false;
+        }
+        public void TotalCanciones(ref int Total)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlCommand cmd = new SqlCommand("select count(IdCancion) from Canciones", ConexionMaestra.conectar);
+                Total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                Total = 0;
+
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
+        private void Total()
+        {
+            Dcanciones funcion = new Dcanciones();
+            funcion.TotalCanciones(ref vTotalCanciones);
+            lblTotalCanciones.Text = vTotalCanciones.ToString();
+        }
+
+        private void Catalogo_Load(object sender, EventArgs e)
+        {
+            MostrarCanciones();
+            Total();
+        }
+
+        private void btnEliminarTodo_Click(object sender, EventArgs e)
+        {
+            EliminarTodasCanciones();
+        }
+        private void EliminarTodasCanciones()
+        {
+            Dcanciones funcion = new Dcanciones();
+            funcion.EliminarTodasCanciones();
+            MostrarCanciones();
         }
     }
 }
