@@ -75,5 +75,24 @@ namespace KaraokeCurso.Datos
 				ConexionMaestra.cerrar();
 			}
 		}
+		public void MostrarCanciones(ref DataTable dt)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("select top 50 * from Canciones", ConexionMaestra.conectar);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.StackTrace);
+
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
 	}
 }

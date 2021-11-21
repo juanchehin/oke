@@ -8,3 +8,4 @@ C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.GenerateResource.cac
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.CoreCompileInputs.cache
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.exe
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.pdb
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Catalogo.resources
