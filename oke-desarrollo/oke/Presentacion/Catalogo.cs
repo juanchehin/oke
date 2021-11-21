@@ -95,5 +95,41 @@ namespace oke.Presentacion
             funcion.EliminarTodasCanciones();
             MostrarCanciones();
         }
+        private void BuscarCanciones()
+        {
+            DataTable dt = new DataTable();
+            Dcanciones funcion = new Dcanciones();
+            funcion.buscarCanciones(ref dt, txtBuscar.Text);
+            dataListado.DataSource = dt;
+            OcultarColumnas();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarCanciones();
+        }
+
+        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            {
+                DialogResult resultado = MessageBox.Show("¿Realmente deseas eliminar esta cancion?", "Eliminando Registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.OK)
+                {
+                    Idcancion = Convert.ToInt32(dataListado.SelectedCells[1].Value);
+                    EliminarCancion();
+                }
+            }
+        }
+        private void EliminarCancion()
+        {
+            Lcanciones parametros = new Lcanciones();
+            Dcanciones funcion = new Dcanciones();
+            parametros.IdCancion = Idcancion;
+            if (funcion.eliminar_Canciones(parametros) == true)
+            {
+                MostrarCanciones();
+            }
+        }
     }
 }
