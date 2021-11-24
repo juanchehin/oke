@@ -38,9 +38,9 @@ namespace KaraokeCurso.Presentacion
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelRegistros = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelRegistro = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMesaEdicion = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@ namespace KaraokeCurso.Presentacion
             this.panelContenedorMesas.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
-            this.panelRegistros.SuspendLayout();
+            this.panelRegistro.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@ namespace KaraokeCurso.Presentacion
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // panelContenedorMesas
             // 
@@ -96,7 +97,7 @@ namespace KaraokeCurso.Presentacion
             this.flowLayoutPanel4.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(310, 119);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(206, 171);
             this.flowLayoutPanel4.TabIndex = 7;
             // 
             // button2
@@ -119,7 +120,7 @@ namespace KaraokeCurso.Presentacion
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(164, 73);
+            this.btnEliminar.Location = new System.Drawing.Point(3, 125);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(136, 46);
             this.btnEliminar.TabIndex = 6;
@@ -132,22 +133,22 @@ namespace KaraokeCurso.Presentacion
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 24);
+            this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Elija una mesa";
+            this.label1.Text = "Mesa";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panelRegistros
+            // panelRegistro
             // 
-            this.panelRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelRegistros.Controls.Add(this.label2);
-            this.panelRegistros.Controls.Add(this.textBox1);
-            this.panelRegistros.Controls.Add(this.flowLayoutPanel2);
-            this.panelRegistros.Location = new System.Drawing.Point(446, 139);
-            this.panelRegistros.Name = "panelRegistros";
-            this.panelRegistros.Size = new System.Drawing.Size(284, 259);
-            this.panelRegistros.TabIndex = 2;
-            this.panelRegistros.Visible = false;
+            this.panelRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelRegistro.Controls.Add(this.label2);
+            this.panelRegistro.Controls.Add(this.txtMesaEdicion);
+            this.panelRegistro.Controls.Add(this.flowLayoutPanel2);
+            this.panelRegistro.Location = new System.Drawing.Point(446, 139);
+            this.panelRegistro.Name = "panelRegistro";
+            this.panelRegistro.Size = new System.Drawing.Size(284, 259);
+            this.panelRegistro.TabIndex = 2;
+            this.panelRegistro.Visible = false;
             // 
             // label2
             // 
@@ -160,12 +161,12 @@ namespace KaraokeCurso.Presentacion
             this.label2.Text = "Mesa";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txtMesaEdicion
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtMesaEdicion.Location = new System.Drawing.Point(65, 3);
+            this.txtMesaEdicion.Name = "txtMesaEdicion";
+            this.txtMesaEdicion.Size = new System.Drawing.Size(140, 20);
+            this.txtMesaEdicion.TabIndex = 2;
             // 
             // flowLayoutPanel2
             // 
@@ -208,7 +209,7 @@ namespace KaraokeCurso.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelRegistros);
+            this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.panelContenedorMesas);
             this.Controls.Add(this.panel1);
             this.Name = "Mesas";
@@ -219,8 +220,8 @@ namespace KaraokeCurso.Presentacion
             this.panelContenedorMesas.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
-            this.panelRegistros.ResumeLayout(false);
-            this.panelRegistros.PerformLayout();
+            this.panelRegistro.ResumeLayout(false);
+            this.panelRegistro.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -232,9 +233,9 @@ namespace KaraokeCurso.Presentacion
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panelContenedorMesas;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel panelRegistros;
+        private System.Windows.Forms.FlowLayoutPanel panelRegistro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMesaEdicion;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnGuardarCambios;

@@ -80,7 +80,7 @@ namespace KaraokeCurso.Datos
             try
             {
                 ConexionMaestra.abrir();
-                SqlCommand cmd = new SqlCommand("eliminarMesa", ConexionMaestra.conectar);
+                SqlCommand cmd = new SqlCommand("eliminar_mesa", ConexionMaestra.conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Idmesa", parametros.IdMesa);

@@ -102,8 +102,8 @@ namespace KaraokeCurso.Presentacion
                     btnEditar.SendToBack();
                     btnMesa.BringToFront();
                     //***************
-                    // btnEliminar.Click += btnEliminar_Click;
-                    // btnEditar.Click += btnEditar_Click;
+                    btnEliminar.Click += BtnEliminar_Click;
+                    btnEditar.Click += BtnEditar_Click;
                 }
             }
             catch (Exception ex)
@@ -113,7 +113,7 @@ namespace KaraokeCurso.Presentacion
             }
         }
 
-        /*private void BtnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
             btnGuardarCambios.Visible = true;
             btnGuardar.Visible = false;
@@ -121,7 +121,7 @@ namespace KaraokeCurso.Presentacion
             panelRegistro.Dock = DockStyle.Fill;
             panelRegistro.BringToFront();
             Idmesa = Convert.ToInt32(((Button)sender).Tag);
-            txtmesaedicion.Text = ((Button)sender).Name;
+            // txtmesaedicion.Text = ((Button)sender).Name;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -144,19 +144,15 @@ namespace KaraokeCurso.Presentacion
             panelRegistro.BringToFront();
             btnGuardar.Visible = true;
             btnGuardarCambios.Visible = false;
-            txtmesaedicion.Clear();
-            txtmesaedicion.Focus();
+            txtMesaEdicion.Clear();
+            txtMesaEdicion.Focus();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            InsertarMesas();
-        }
         private void InsertarMesas()
         {
             Lmesas parametros = new Lmesas();
             Dmesas funcion = new Dmesas();
-            parametros.Mesa = txtmesaedicion.Text;
+            parametros.Mesa = txtMesaEdicion.Text;
             if (funcion.Insertar_mesa(parametros) == true)
             {
                 panelRegistro.Visible = false;
@@ -173,7 +169,7 @@ namespace KaraokeCurso.Presentacion
             Lmesas parametros = new Lmesas();
             Dmesas funcion = new Dmesas();
             parametros.IdMesa = Idmesa;
-            parametros.Mesa = txtmesaedicion.Text;
+            parametros.Mesa = txtMesaEdicion.Text;
             if (funcion.editar_mesa(parametros) == true)
             {
                 panelRegistro.Visible = false;
@@ -184,6 +180,10 @@ namespace KaraokeCurso.Presentacion
         {
             panelRegistro.Visible = false;
         }
-        */
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            InsertarMesas();
+        }
     }
 }
