@@ -183,6 +183,17 @@ namespace KaraokeCurso.Presentacion
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
+            panelRegistro.Visible = true;
+            panelRegistro.Dock = DockStyle.Fill;
+            panelRegistro.BringToFront();
+            btnGuardar.Visible = true;
+            btnGuardarCambios.Visible = false;
+            txtMesaEdicion.Clear();
+            txtMesaEdicion.Focus();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
             InsertarMesas();
         }
     }

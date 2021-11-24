@@ -102,30 +102,34 @@ namespace KaraokeCurso.Presentacion
             // 
             // button2
             // 
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(307, 64);
             this.button2.TabIndex = 5;
             this.button2.Text = "1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnEditar.Location = new System.Drawing.Point(3, 73);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(155, 46);
             this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnEliminar.Location = new System.Drawing.Point(3, 125);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(136, 46);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -146,7 +150,7 @@ namespace KaraokeCurso.Presentacion
             this.panelRegistro.Controls.Add(this.flowLayoutPanel2);
             this.panelRegistro.Location = new System.Drawing.Point(446, 139);
             this.panelRegistro.Name = "panelRegistro";
-            this.panelRegistro.Size = new System.Drawing.Size(284, 259);
+            this.panelRegistro.Size = new System.Drawing.Size(200, 200);
             this.panelRegistro.TabIndex = 2;
             this.panelRegistro.Visible = false;
             // 
@@ -163,7 +167,7 @@ namespace KaraokeCurso.Presentacion
             // 
             // txtMesaEdicion
             // 
-            this.txtMesaEdicion.Location = new System.Drawing.Point(65, 3);
+            this.txtMesaEdicion.Location = new System.Drawing.Point(3, 27);
             this.txtMesaEdicion.Name = "txtMesaEdicion";
             this.txtMesaEdicion.Size = new System.Drawing.Size(140, 20);
             this.txtMesaEdicion.TabIndex = 2;
@@ -173,7 +177,7 @@ namespace KaraokeCurso.Presentacion
             this.flowLayoutPanel2.Controls.Add(this.btnGuardar);
             this.flowLayoutPanel2.Controls.Add(this.btnGuardarCambios);
             this.flowLayoutPanel2.Controls.Add(this.btnVolver);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 29);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 53);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(96, 198);
             this.flowLayoutPanel2.TabIndex = 3;
@@ -186,6 +190,7 @@ namespace KaraokeCurso.Presentacion
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnGuardarCambios
             // 
@@ -220,6 +225,7 @@ namespace KaraokeCurso.Presentacion
             this.panelContenedorMesas.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
