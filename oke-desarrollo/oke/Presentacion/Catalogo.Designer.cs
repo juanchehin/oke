@@ -126,12 +126,17 @@ namespace oke.Presentacion
             this.dataListado.AllowUserToAddRows = false;
             this.dataListado.AllowUserToDeleteRows = false;
             this.dataListado.AllowUserToResizeColumns = false;
+            this.dataListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListado.ColumnHeadersVisible = false;
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
             this.dataListado.Location = new System.Drawing.Point(37, 146);
             this.dataListado.Name = "dataListado";
             this.dataListado.ReadOnly = true;
+            this.dataListado.RowHeadersVisible = false;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListado.Size = new System.Drawing.Size(757, 248);
             this.dataListado.TabIndex = 1;
@@ -154,6 +159,7 @@ namespace oke.Presentacion
             this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 5;
             // 
             // Catalogo
             // 
