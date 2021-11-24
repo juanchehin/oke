@@ -159,6 +159,7 @@ namespace oke.Presentacion
             this.btnMesas.Text = "Mesas";
             this.btnMesas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMesas.UseVisualStyleBackColor = false;
+            this.btnMesas.Click += new System.EventHandler(this.btnMesas_Click);
             // 
             // btnGenerarQR
             // 
