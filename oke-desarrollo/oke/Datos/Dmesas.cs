@@ -7,9 +7,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using oke.Logica;
 using oke.Datos;
-using KaraokeCurso.Logica;
 
-namespace KaraokeCurso.Datos
+namespace oke.Datos
 {
     public class Dmesas
     {

@@ -6,10 +6,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using KaraokeCurso.Datos;
-using KaraokeCurso.Logica;
+using oke.Datos;
+using oke.Logica;
 
-namespace KaraokeCurso.Presentacion
+namespace oke.Presentacion
 {
     public partial class Mesas : UserControl
     {
@@ -27,8 +27,8 @@ namespace KaraokeCurso.Presentacion
         {
             try
             {
-                //panelMesas.Dock = DockStyle.Fill;
-                panelContenedorMesas.Controls.Clear();
+                panelMesas.Dock = DockStyle.Fill;
+                panelMesas.Controls.Clear();
                 DataTable dt = new DataTable();
                 Dmesas funcion = new Dmesas();
                 funcion.MostrarMesas(ref dt);
@@ -98,7 +98,7 @@ namespace KaraokeCurso.Presentacion
                     PanelBotones.Controls.Add(btnEliminar);
                     panelPrincipal.Controls.Add(btnMesa);
                     panelPrincipal.Controls.Add(PanelBotones);
-                    panelContenedorMesas.Controls.Add(panelPrincipal);
+                    panelMesas.Controls.Add(panelPrincipal);
                     btnEditar.SendToBack();
                     btnMesa.BringToFront();
                     //***************

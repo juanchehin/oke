@@ -22,3 +22,27 @@ E:\Proyectos en Csharp\KaraokeCurso\bin\Debug\Luxor.pdb
 E:\Proyectos en Csharp\KaraokeCurso\obj\Debug\Luxor.exe.licenses
 E:\Proyectos en Csharp\KaraokeCurso\obj\Debug\Luxor.exe
 E:\Proyectos en Csharp\KaraokeCurso\obj\Debug\Luxor.pdb
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Luxor.exe
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Luxor.pdb
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Telerik.Reporting.dll
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Telerik.ReportViewer.WinForms.dll
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Telerik.Reporting.pdb
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Telerik.Reporting.xml
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Programacion\oke\KaraokeCurso\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.csproj.AssemblyReference.cache
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.AsistenteInst.InstaladorBds.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.Catalogo.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.CodigosQRMesas.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.GenerarQR.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.MenuPrincipal.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.Mesas.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.TomarPedidos.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Presentacion.VerPedidos.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.Properties.Resources.resources
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.csproj.GenerateResource.cache
+C:\Programacion\oke\KaraokeCurso\obj\Debug\Luxor.exe.licenses
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.csproj.CoreCompileInputs.cache
+C:\Programacion\oke\KaraokeCurso\obj\Debug\KaraokeCurso.csproj.CopyComplete
+C:\Programacion\oke\KaraokeCurso\obj\Debug\Luxor.exe
+C:\Programacion\oke\KaraokeCurso\obj\Debug\Luxor.pdb

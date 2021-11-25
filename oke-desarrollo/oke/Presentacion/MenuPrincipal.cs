@@ -1,4 +1,4 @@
-﻿using KaraokeCurso.Presentacion;
+﻿using oke.Presentacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,9 +27,9 @@ namespace oke.Presentacion
 
         private void btnMesas_Click(object sender, EventArgs e)
         {
-            panelPadre.Controls.Clear();
+            panelPadre.Controls.Clear();    // Limpia panel padre (cartel bienvenidos)
             Mesas control = new Mesas();
-            control.Dock = DockStyle.Fill;
+            // control.Dock = DockStyle.Fill;
             panelPadre.Controls.Add(control);
         }
     }

@@ -30,25 +30,25 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.panelMesas = new System.Windows.Forms.Panel();
-            this.panelRegistro = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.txtmesaedicion = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelRegistro = new System.Windows.Forms.Panel();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelMesas = new System.Windows.Forms.Panel();
             this.panelContenedorMesas = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panelMesas.SuspendLayout();
             this.panelRegistro.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panelMesas.SuspendLayout();
             this.panelContenedorMesas.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -84,14 +84,37 @@
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // panelMesas
+            // label2
             // 
-            this.panelMesas.Controls.Add(this.panelContenedorMesas);
-            this.panelMesas.Controls.Add(this.label1);
-            this.panelMesas.Location = new System.Drawing.Point(21, 96);
-            this.panelMesas.Name = "panelMesas";
-            this.panelMesas.Size = new System.Drawing.Size(317, 365);
-            this.panelMesas.TabIndex = 2;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(333, 57);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mesa";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtmesaedicion
+            // 
+            this.txtmesaedicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtmesaedicion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtmesaedicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmesaedicion.ForeColor = System.Drawing.Color.White;
+            this.txtmesaedicion.Location = new System.Drawing.Point(27, 87);
+            this.txtmesaedicion.Name = "txtmesaedicion";
+            this.txtmesaedicion.Size = new System.Drawing.Size(279, 31);
+            this.txtmesaedicion.TabIndex = 3;
+            this.txtmesaedicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(27, 124);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(279, 1);
+            this.panel4.TabIndex = 4;
             // 
             // panelRegistro
             // 
@@ -106,79 +129,18 @@
             this.panelRegistro.TabIndex = 3;
             this.panelRegistro.Visible = false;
             // 
-            // label1
+            // btnVolver
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MESAS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(333, 57);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mesa";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(27, 124);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(279, 1);
-            this.panel4.TabIndex = 4;
-            // 
-            // txtmesaedicion
-            // 
-            this.txtmesaedicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.txtmesaedicion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmesaedicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmesaedicion.ForeColor = System.Drawing.Color.White;
-            this.txtmesaedicion.Location = new System.Drawing.Point(27, 87);
-            this.txtmesaedicion.Name = "txtmesaedicion";
-            this.txtmesaedicion.Size = new System.Drawing.Size(279, 31);
-            this.txtmesaedicion.TabIndex = 3;
-            this.txtmesaedicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnGuardar);
-            this.flowLayoutPanel1.Controls.Add(this.btnGuardarCambios);
-            this.flowLayoutPanel1.Controls.Add(this.btnVolver);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 132);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(127, 197);
-            this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.BackgroundImage = global::KaraokeCurso.Properties.Resources.verde;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(3, 3);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(116, 50);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Gray;
+            this.btnVolver.Location = new System.Drawing.Point(3, 115);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(116, 49);
+            this.btnVolver.TabIndex = 6;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnGuardarCambios
             // 
@@ -200,28 +162,56 @@
             this.btnGuardarCambios.UseVisualStyleBackColor = false;
             this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
-            // btnVolver
+            // btnGuardar
             // 
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Gray;
-            this.btnVolver.Location = new System.Drawing.Point(3, 115);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(116, 49);
-            this.btnVolver.TabIndex = 6;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.BackgroundImage = global::KaraokeCurso.Properties.Resources.verde;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.Location = new System.Drawing.Point(3, 3);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 50);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button1
+            // flowLayoutPanel1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 85);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.Controls.Add(this.btnGuardar);
+            this.flowLayoutPanel1.Controls.Add(this.btnGuardarCambios);
+            this.flowLayoutPanel1.Controls.Add(this.btnVolver);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 132);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(127, 197);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(317, 57);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MESAS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelMesas
+            // 
+            this.panelMesas.Controls.Add(this.panelContenedorMesas);
+            this.panelMesas.Controls.Add(this.label1);
+            this.panelMesas.Location = new System.Drawing.Point(21, 96);
+            this.panelMesas.Name = "panelMesas";
+            this.panelMesas.Size = new System.Drawing.Size(317, 365);
+            this.panelMesas.TabIndex = 2;
             // 
             // panelContenedorMesas
             // 
@@ -241,6 +231,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(180, 129);
             this.panel5.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 85);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -274,10 +274,10 @@
             this.Size = new System.Drawing.Size(759, 514);
             this.Load += new System.EventHandler(this.Mesas_Load);
             this.panel1.ResumeLayout(false);
-            this.panelMesas.ResumeLayout(false);
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelMesas.ResumeLayout(false);
             this.panelContenedorMesas.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -288,16 +288,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Panel panelMesas;
-        private System.Windows.Forms.Panel panelRegistro;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtmesaedicion;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelRegistro;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelMesas;
         private System.Windows.Forms.FlowLayoutPanel panelContenedorMesas;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
