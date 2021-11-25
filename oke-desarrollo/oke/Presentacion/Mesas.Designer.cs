@@ -47,7 +47,7 @@ namespace oke.Presentacion
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(573, 19);
+            this.btnAgregar.Location = new System.Drawing.Point(703, 6);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(154, 36);
             this.btnAgregar.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace oke.Presentacion
             this.panelMesas.Controls.Add(this.panelContenedorMesas);
             this.panelMesas.Location = new System.Drawing.Point(3, 109);
             this.panelMesas.Name = "panelMesas";
-            this.panelMesas.Size = new System.Drawing.Size(756, 266);
+            this.panelMesas.Size = new System.Drawing.Size(889, 471);
             this.panelMesas.TabIndex = 1;
             // 
             // label1
@@ -151,9 +151,9 @@ namespace oke.Presentacion
             // 
             this.panelContenedorMesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panelContenedorMesas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelContenedorMesas.Location = new System.Drawing.Point(66, 36);
+            this.panelContenedorMesas.Location = new System.Drawing.Point(70, 54);
             this.panelContenedorMesas.Name = "panelContenedorMesas";
-            this.panelContenedorMesas.Size = new System.Drawing.Size(501, 219);
+            this.panelContenedorMesas.Size = new System.Drawing.Size(684, 412);
             this.panelContenedorMesas.TabIndex = 2;
             // 
             // Mesas
@@ -163,7 +163,7 @@ namespace oke.Presentacion
             this.Controls.Add(this.panelMesas);
             this.Controls.Add(this.panelRegistro);
             this.Name = "Mesas";
-            this.Size = new System.Drawing.Size(762, 531);
+            this.Size = new System.Drawing.Size(895, 583);
             this.Load += new System.EventHandler(this.Mesas_Load);
             this.panelMesas.ResumeLayout(false);
             this.panelMesas.PerformLayout();

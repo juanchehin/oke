@@ -40,11 +40,12 @@ namespace oke.Presentacion
                     Panel panelPrincipal = new Panel();
                     Panel PanelBotones = new Panel();
 
+                    // ******* Boton Mesa ******
                     btnMesa.Text = rdr["Mesa"].ToString();
                     btnMesa.Name = rdr["IdMesa"].ToString();
                     btnMesa.Size = new Size(152, 80);
                     btnMesa.Font = new Font("Microsoft Sans Serif", 13);
-                    //btnMesa.BackColor = Color.Transparent;
+                    btnMesa.BackColor = Color.Brown;
                     // btnMesa.BackgroundImage = oke.Properties.Resources.green;
                     btnMesa.BackgroundImageLayout = ImageLayout.Stretch;
                     btnMesa.FlatStyle = FlatStyle.Flat;
@@ -55,31 +56,31 @@ namespace oke.Presentacion
                     btnMesa.Cursor = Cursors.Hand;
                     btnMesa.FlatAppearance.MouseDownBackColor = Color.Transparent;
                     btnMesa.FlatAppearance.MouseOverBackColor = Color.Transparent;
-                    //***************************
+                    // ******* Boton Editar ******
                     btnEditar.Text = "Editar";
                     btnEditar.Name = rdr["Mesa"].ToString();
                     btnEditar.Tag = rdr["IdMesa"].ToString();
                     btnEliminar.Text = "Eliminar";
                     btnEliminar.Name = rdr["IdMesa"].ToString();
-                    //******************************
+                    
                     btnEditar.Size = new Size(76, 40);
                     btnEditar.Dock = DockStyle.Left;
                     btnEditar.Font = new Font("Microsoft Sans Serif", 10);
-                    btnEditar.BackColor = Color.Transparent;
+                    btnEditar.BackColor = Color.Blue;
                     // btnEditar.BackgroundImage = Properties.Resources.negro;
                     btnEditar.BackgroundImageLayout = ImageLayout.Stretch;
                     btnEditar.FlatStyle = FlatStyle.Flat;
                     btnEditar.FlatAppearance.BorderSize = 0;
-                    btnEditar.ForeColor = Color.White;
+                    btnEditar.ForeColor = Color.White;  // Color de la letra
                     btnEditar.TextAlign = ContentAlignment.MiddleCenter;
                     btnEditar.Cursor = Cursors.Hand;
                     btnEditar.FlatAppearance.MouseDownBackColor = Color.Transparent;
                     btnEditar.FlatAppearance.MouseOverBackColor = Color.Transparent;
-                    //***********
+                    //***** Boton Eliminar ******
                     btnEliminar.Size = new Size(76, 40);
                     btnEliminar.Dock = DockStyle.Left;
                     btnEliminar.Font = new Font("Microsoft Sans Serif", 10);
-                    btnEliminar.BackColor = Color.Transparent;
+                    btnEliminar.BackColor = Color.Magenta;
                     // btnEliminar.BackgroundImage = Properties.Resources.Rojo;
                     btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
                     btnEliminar.FlatStyle = FlatStyle.Flat;
@@ -89,7 +90,7 @@ namespace oke.Presentacion
                     btnEliminar.Cursor = Cursors.Hand;
                     btnEliminar.FlatAppearance.MouseDownBackColor = Color.Transparent;
                     btnEliminar.FlatAppearance.MouseOverBackColor = Color.Transparent;
-                    //*****************
+                    //******* Panel Botones **********
                     PanelBotones.Size = new Size(76, 40);
                     PanelBotones.Dock = DockStyle.Bottom;
                     //*********************
