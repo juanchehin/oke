@@ -27,8 +27,8 @@ namespace oke.Presentacion
         {
             try
             {
-                panelMesas.Dock = DockStyle.Fill;
-                panelMesas.Controls.Clear();
+                // panelMesas.Dock = DockStyle.Fill;
+                // panelMesas.Controls.Clear();
                 DataTable dt = new DataTable();
                 Dmesas funcion = new Dmesas();
                 funcion.MostrarMesas(ref dt);

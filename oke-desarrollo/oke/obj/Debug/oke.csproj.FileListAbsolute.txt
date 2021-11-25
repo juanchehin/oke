@@ -9,4 +9,4 @@ C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.CoreCompileInputs.ca
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.exe
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.pdb
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Catalogo.resources
-C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\KaraokeCurso.Presentacion.Mesas.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Mesas.resources

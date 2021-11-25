@@ -278,7 +278,7 @@ namespace oke.Presentacion
             this.panelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPadre.Location = new System.Drawing.Point(313, 0);
             this.panelPadre.Name = "panelPadre";
-            this.panelPadre.Size = new System.Drawing.Size(573, 749);
+            this.panelPadre.Size = new System.Drawing.Size(756, 749);
             this.panelPadre.TabIndex = 2;
             // 
             // label1
@@ -296,7 +296,7 @@ namespace oke.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 749);
+            this.ClientSize = new System.Drawing.Size(1069, 749);
             this.Controls.Add(this.panelPadre);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

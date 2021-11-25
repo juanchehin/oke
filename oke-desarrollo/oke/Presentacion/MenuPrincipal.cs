@@ -30,6 +30,7 @@ namespace oke.Presentacion
             panelPadre.Controls.Clear();    // Limpia panel padre (cartel bienvenidos)
             Mesas control = new Mesas();
             // control.Dock = DockStyle.Fill;
+            
             panelPadre.Controls.Add(control);
         }
     }
