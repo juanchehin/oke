@@ -79,7 +79,7 @@ namespace KaraokeCurso.Presentacion
             this.panelContenedorMesas.Controls.Add(this.label1);
             this.panelContenedorMesas.Location = new System.Drawing.Point(30, 133);
             this.panelContenedorMesas.Name = "panelContenedorMesas";
-            this.panelContenedorMesas.Size = new System.Drawing.Size(320, 280);
+            this.panelContenedorMesas.Size = new System.Drawing.Size(413, 275);
             this.panelContenedorMesas.TabIndex = 1;
             // 
             // flowLayoutPanel3
@@ -87,7 +87,7 @@ namespace KaraokeCurso.Presentacion
             this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(4, 38);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(313, 239);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(395, 219);
             this.flowLayoutPanel3.TabIndex = 1;
             // 
             // flowLayoutPanel4
@@ -97,16 +97,17 @@ namespace KaraokeCurso.Presentacion
             this.flowLayoutPanel4.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(206, 171);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(310, 129);
             this.flowLayoutPanel4.TabIndex = 7;
             // 
             // button2
             // 
             this.button2.AutoSize = true;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Document, ((byte)(3)));
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(307, 64);
+            this.button2.Size = new System.Drawing.Size(999, 1097);
             this.button2.TabIndex = 5;
             this.button2.Text = "1";
             this.button2.UseVisualStyleBackColor = false;
@@ -114,7 +115,7 @@ namespace KaraokeCurso.Presentacion
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnEditar.Location = new System.Drawing.Point(3, 73);
+            this.btnEditar.Location = new System.Drawing.Point(3, 1106);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(155, 46);
             this.btnEditar.TabIndex = 4;
@@ -124,7 +125,7 @@ namespace KaraokeCurso.Presentacion
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnEliminar.Location = new System.Drawing.Point(3, 125);
+            this.btnEliminar.Location = new System.Drawing.Point(164, 1106);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(136, 46);
             this.btnEliminar.TabIndex = 6;
@@ -148,7 +149,7 @@ namespace KaraokeCurso.Presentacion
             this.panelRegistro.Controls.Add(this.label2);
             this.panelRegistro.Controls.Add(this.txtMesaEdicion);
             this.panelRegistro.Controls.Add(this.flowLayoutPanel2);
-            this.panelRegistro.Location = new System.Drawing.Point(446, 139);
+            this.panelRegistro.Location = new System.Drawing.Point(240, 93);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Size = new System.Drawing.Size(200, 200);
             this.panelRegistro.TabIndex = 2;
@@ -209,16 +210,17 @@ namespace KaraokeCurso.Presentacion
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
             // Mesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.panelContenedorMesas);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelRegistro);
             this.Name = "Mesas";
-            this.Size = new System.Drawing.Size(762, 435);
+            this.Size = new System.Drawing.Size(762, 531);
             this.Load += new System.EventHandler(this.Mesas_Load);
             this.panel1.ResumeLayout(false);
             this.panelContenedorMesas.ResumeLayout(false);

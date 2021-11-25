@@ -176,15 +176,11 @@ namespace KaraokeCurso.Presentacion
                 DibujarMesas();
             }
         }
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            panelRegistro.Visible = false;
-        }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             panelRegistro.Visible = true;
-            panelRegistro.Dock = DockStyle.Fill;
+            // panelRegistro.Dock = DockStyle.Fill;
             panelRegistro.BringToFront();
             btnGuardar.Visible = true;
             btnGuardarCambios.Visible = false;
@@ -195,6 +191,11 @@ namespace KaraokeCurso.Presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             InsertarMesas();
+        }
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
+        {
+            panelRegistro.Visible = false;
         }
     }
 }
