@@ -8,7 +8,7 @@ using oke.Logica;
 using System.Windows.Forms;
 using oke.Datos;
 
-namespace KaraokeCurso.Datos
+namespace oke.Datos
 {
 	public class Dcanciones
 	{

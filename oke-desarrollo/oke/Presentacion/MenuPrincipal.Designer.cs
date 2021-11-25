@@ -194,6 +194,7 @@ namespace oke.Presentacion
             this.btnPedir.Text = "Pedir";
             this.btnPedir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPedir.UseVisualStyleBackColor = false;
+            this.btnPedir.Click += new System.EventHandler(this.btnPedir_Click);
             // 
             // btnCatalogo
             // 

@@ -6,7 +6,6 @@ using System.Data;
 using System.Data.SqlClient;
 using oke.Logica;
 using System.Windows.Forms;
-using KaraokeCurso.Datos;
 using oke.Datos;
 
 namespace oke.Presentacion

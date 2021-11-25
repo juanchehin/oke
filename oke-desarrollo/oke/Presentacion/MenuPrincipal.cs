@@ -33,5 +33,13 @@ namespace oke.Presentacion
             
             panelPadre.Controls.Add(control);
         }
+
+        private void btnPedir_Click(object sender, EventArgs e)
+        {
+            panelPadre.Controls.Clear();    // Limpia panel padre (cartel bienvenidos)
+            TomarPedidos control = new TomarPedidos();
+            control.Dock = DockStyle.Fill;
+            panelPadre.Controls.Add(control);
+        }
     }
 }
