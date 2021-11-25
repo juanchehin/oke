@@ -49,8 +49,10 @@
     <Compile Include="Datos\ConexionMaestra.cs" />
     <Compile Include="Datos\Dcanciones.cs" />
     <Compile Include="Datos\Dmesas.cs" />
+    <Compile Include="Datos\Dpedidos.cs" />
     <Compile Include="Logica\Lcanciones.cs" />
     <Compile Include="Logica\Lmesas.cs" />
+    <Compile Include="Logica\Lpedidos.cs" />
     <Compile Include="Presentacion\Catalogo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +71,12 @@
     <Compile Include="Presentacion\Mesas.Designer.cs">
       <DependentUpon>Mesas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\TomarPedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\TomarPedidos.Designer.cs">
+      <DependentUpon>TomarPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\Catalogo.resx">
@@ -79,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Mesas.resx">
       <DependentUpon>Mesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\TomarPedidos.resx">
+      <DependentUpon>TomarPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
