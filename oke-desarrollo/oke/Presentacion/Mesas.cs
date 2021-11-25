@@ -39,11 +39,12 @@ namespace oke.Presentacion
                     Button btnEliminar = new Button();
                     Panel panelPrincipal = new Panel();
                     Panel PanelBotones = new Panel();
+
                     btnMesa.Text = rdr["Mesa"].ToString();
                     btnMesa.Name = rdr["IdMesa"].ToString();
                     btnMesa.Size = new Size(152, 80);
                     btnMesa.Font = new Font("Microsoft Sans Serif", 13);
-                    btnMesa.BackColor = Color.Transparent;
+                    //btnMesa.BackColor = Color.Transparent;
                     // btnMesa.BackgroundImage = oke.Properties.Resources.green;
                     btnMesa.BackgroundImageLayout = ImageLayout.Stretch;
                     btnMesa.FlatStyle = FlatStyle.Flat;
@@ -98,7 +99,7 @@ namespace oke.Presentacion
                     PanelBotones.Controls.Add(btnEliminar);
                     panelPrincipal.Controls.Add(btnMesa);
                     panelPrincipal.Controls.Add(PanelBotones);
-                    panelMesas.Controls.Add(panelPrincipal);
+                    panelContenedorMesas.Controls.Add(panelPrincipal);
                     btnEditar.SendToBack();
                     btnMesa.BringToFront();
                     //***************
@@ -121,7 +122,7 @@ namespace oke.Presentacion
             panelRegistro.Dock = DockStyle.Fill;
             panelRegistro.BringToFront();
             Idmesa = Convert.ToInt32(((Button)sender).Tag);
-            // txtmesaedicion.Text = ((Button)sender).Name;
+            txtMesaEdicion.Text = ((Button)sender).Name;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

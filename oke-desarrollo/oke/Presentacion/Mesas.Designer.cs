@@ -39,6 +39,7 @@ namespace oke.Presentacion
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.panelContenedorMesas = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMesas.SuspendLayout();
             this.panelRegistro.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -60,6 +61,7 @@ namespace oke.Presentacion
             this.panelMesas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMesas.Controls.Add(this.btnAgregar);
             this.panelMesas.Controls.Add(this.label1);
+            this.panelMesas.Controls.Add(this.panelContenedorMesas);
             this.panelMesas.Location = new System.Drawing.Point(3, 109);
             this.panelMesas.Name = "panelMesas";
             this.panelMesas.Size = new System.Drawing.Size(756, 266);
@@ -71,9 +73,9 @@ namespace oke.Presentacion
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 24);
+            this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mesas";
+            this.label1.Text = "Mesa";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panelRegistro
@@ -145,6 +147,15 @@ namespace oke.Presentacion
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
+            // panelContenedorMesas
+            // 
+            this.panelContenedorMesas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panelContenedorMesas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelContenedorMesas.Location = new System.Drawing.Point(66, 36);
+            this.panelContenedorMesas.Name = "panelContenedorMesas";
+            this.panelContenedorMesas.Size = new System.Drawing.Size(501, 219);
+            this.panelContenedorMesas.TabIndex = 2;
+            // 
             // Mesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,5 +185,6 @@ namespace oke.Presentacion
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.FlowLayoutPanel panelContenedorMesas;
     }
 }
