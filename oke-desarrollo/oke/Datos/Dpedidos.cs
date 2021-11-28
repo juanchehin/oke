@@ -96,5 +96,47 @@ namespace oke.Datos
                 ConexionMaestra.cerrar();
             }
         }
+
+        public void ContarPedidosTodos(ref int Total)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlCommand cmd = new SqlCommand("select count(IdPedido) from Pedidos", ConexionMaestra.conectar);
+                Total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                Total = 0;
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
+
+        public bool insertar_cumpleanios(Lpedidos parametros)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlCommand cmd = new SqlCommand("insertar_cumpleanios", ConexionMaestra.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdMesa", parametros.IdMesa);
+                cmd.Parameters.AddWithValue("@Mensaje", parametros.Mensaje);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
     }
 }

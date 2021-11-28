@@ -1,4 +1,5 @@
-﻿using oke.Presentacion;
+﻿using oke.Datos;
+using oke.Presentacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,27 @@ namespace oke.Presentacion
             TomarPedidos control = new TomarPedidos();
             control.Dock = DockStyle.Fill;
             panelPadre.Controls.Add(control);
+        }
+
+        private void timerPedidos_Tick(object sender, EventArgs e)
+        {
+            ContarPedidos();
+        }
+
+        private void ContarPedidos()
+        {
+            int ContadorPedidos = 0;
+            Dpedidos funcion = new Dpedidos();
+            funcion.ContarPedidosTodos(ref ContadorPedidos);
+            if (ContadorPedidos == 0)
+            {
+                // panelCantPedidos.Visible = false;
+            }
+            else
+            {
+                lblCantPedidos.Text = ContadorPedidos.ToString();
+                // panelCantPedidos.Visible = true;
+            }
         }
     }
 }

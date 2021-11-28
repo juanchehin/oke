@@ -80,7 +80,7 @@ namespace oke.Datos
 			try
 			{
 				ConexionMaestra.abrir();
-				SqlDataAdapter da = new SqlDataAdapter("select top 50 * from Canciones", ConexionMaestra.conectar);
+				SqlDataAdapter da = new SqlDataAdapter("select top 50 * from Canciones where Nombre <> 'Happy Birthday'", ConexionMaestra.conectar);
 				da.Fill(dt);
 			}
 			catch (Exception ex)
@@ -124,6 +124,30 @@ namespace oke.Datos
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.StackTrace);
+				return false;
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
+
+		public bool insertar_cumpleanios(Lpedidos parametros)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlCommand cmd = new SqlCommand("insertar_cumpleanios", ConexionMaestra.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@IdMesa", parametros.IdMesa);
+				cmd.Parameters.AddWithValue("@Mensaje", parametros.Mensaje);
+
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+
 				return false;
 			}
 			finally

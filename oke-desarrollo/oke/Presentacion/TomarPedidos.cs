@@ -45,7 +45,7 @@ namespace oke.Presentacion
             {
                 panelCanciones.Visible = false;
                 panelMesas.Visible = true;
-                // panelSaludo.Visible = false;
+                panelSaludo.Visible = false;
 
                 panelMesas.Dock = DockStyle.Fill;
                 panelContenedorMesas.Controls.Clear();
@@ -118,6 +118,48 @@ namespace oke.Presentacion
                 MessageBox.Show("Pedido realizado");
                 buscarCanciones();
             }
+        }
+
+        private void btnCumpleanos_Click(object sender, EventArgs e)
+        {
+            txtSaludo.Clear();
+            panelSaludo.Visible = true;
+            panelSaludo.Location = new Point((Width - panelSaludo.Width) / 2, (Height - panelSaludo.Height) / 2);
+            panelSaludo.BringToFront();
+            panelCanciones.Enabled = false;
+        }
+
+        private void btnPedirC_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSaludo.Text))
+            {
+                insertar_cumpleanios();
+                panelCanciones.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un saludo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void insertar_cumpleanios()
+        {
+            Lpedidos parametros = new Lpedidos();
+            Dpedidos funcion = new Dpedidos();
+            parametros.IdMesa = idMesa;
+            parametros.Mensaje = txtSaludo.Text;
+            if (funcion.insertar_cumpleanios(parametros) == true)
+            {
+                MessageBox.Show("Pedido realizado");
+                panelSaludo.Visible = false;
+
+            }
+        }
+
+        private void btnVolverC_Click(object sender, EventArgs e)
+        {
+            panelSaludo.Visible = false;
+            panelCanciones.Enabled = true;
         }
     }
 }

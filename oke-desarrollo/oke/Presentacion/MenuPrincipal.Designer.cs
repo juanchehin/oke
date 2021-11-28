@@ -29,6 +29,7 @@ namespace oke.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -47,6 +48,8 @@ namespace oke.Presentacion
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelPadre = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblCantPedidos = new System.Windows.Forms.Label();
+            this.timerPedidos = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -57,6 +60,7 @@ namespace oke.Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.panel1.Controls.Add(this.lblCantPedidos);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Controls.Add(this.btnRespaldarBD);
@@ -223,7 +227,7 @@ namespace oke.Presentacion
             this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.Location = new System.Drawing.Point(35, 53);
+            this.btnPedidos.Location = new System.Drawing.Point(12, 53);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(180, 44);
             this.btnPedidos.TabIndex = 1;
@@ -293,6 +297,22 @@ namespace oke.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
             // 
+            // lblCantPedidos
+            // 
+            this.lblCantPedidos.AutoSize = true;
+            this.lblCantPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblCantPedidos.Location = new System.Drawing.Point(195, 64);
+            this.lblCantPedidos.Name = "lblCantPedidos";
+            this.lblCantPedidos.Size = new System.Drawing.Size(23, 25);
+            this.lblCantPedidos.TabIndex = 11;
+            this.lblCantPedidos.Text = "1";
+            // 
+            // timerPedidos
+            // 
+            this.timerPedidos.Enabled = true;
+            this.timerPedidos.Tick += new System.EventHandler(this.timerPedidos_Tick);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +327,7 @@ namespace oke.Presentacion
             this.Text = "Oke";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -335,5 +356,7 @@ namespace oke.Presentacion
         private System.Windows.Forms.Button btnRespaldarBD;
         private System.Windows.Forms.Button btnRestaurarBD;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCantPedidos;
+        private System.Windows.Forms.Timer timerPedidos;
     }
 }
