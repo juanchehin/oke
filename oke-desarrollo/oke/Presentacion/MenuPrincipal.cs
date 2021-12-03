@@ -63,5 +63,13 @@ namespace oke.Presentacion
                 // panelCantPedidos.Visible = true;
             }
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            panelPadre.Controls.Clear();
+            VerPedidos control = new VerPedidos();
+            control.Dock = DockStyle.Fill;
+            panelPadre.Controls.Add(control);
+        }
     }
 }

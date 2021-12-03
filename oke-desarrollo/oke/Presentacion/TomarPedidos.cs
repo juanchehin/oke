@@ -96,17 +96,6 @@ namespace oke.Presentacion
 
         private void dataListado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // MessageBox.Show(dataListado.SelectedColumns[0].ToString());
-            // MessageBox.Show(dataListado.SelectedCells[0].Value.ToString());
-
-            MessageBox.Show("La celda seleccionada es : ");
-            MessageBox.Show(dataListado.Rows[e.RowIndex].Cells["IdCancion"].Value.ToString());
-
-            idCancion = Convert.ToInt32(dataListado.Rows[e.RowIndex].Cells["IdCancion"].Value.ToString());
-
-            MessageBox.Show("IdCancion es : ");
-            MessageBox.Show(idCancion.ToString());
-
             if (e.ColumnIndex == dataListado.Columns["Pedir"].Index)
             {
                 insertar_Pedidos();

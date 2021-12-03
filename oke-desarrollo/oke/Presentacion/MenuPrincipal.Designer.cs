@@ -32,6 +32,7 @@ namespace oke.Presentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantPedidos = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnRespaldarBD = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace oke.Presentacion
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelPadre = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblCantPedidos = new System.Windows.Forms.Label();
             this.timerPedidos = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,6 +77,17 @@ namespace oke.Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 749);
             this.panel1.TabIndex = 0;
+            // 
+            // lblCantPedidos
+            // 
+            this.lblCantPedidos.AutoSize = true;
+            this.lblCantPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblCantPedidos.Location = new System.Drawing.Point(195, 64);
+            this.lblCantPedidos.Name = "lblCantPedidos";
+            this.lblCantPedidos.Size = new System.Drawing.Size(23, 25);
+            this.lblCantPedidos.TabIndex = 11;
+            this.lblCantPedidos.Text = "1";
             // 
             // panel5
             // 
@@ -234,6 +245,7 @@ namespace oke.Presentacion
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // panel4
             // 
@@ -296,17 +308,6 @@ namespace oke.Presentacion
             this.label1.Size = new System.Drawing.Size(430, 91);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
-            // 
-            // lblCantPedidos
-            // 
-            this.lblCantPedidos.AutoSize = true;
-            this.lblCantPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblCantPedidos.Location = new System.Drawing.Point(195, 64);
-            this.lblCantPedidos.Name = "lblCantPedidos";
-            this.lblCantPedidos.Size = new System.Drawing.Size(23, 25);
-            this.lblCantPedidos.TabIndex = 11;
-            this.lblCantPedidos.Text = "1";
             // 
             // timerPedidos
             // 
