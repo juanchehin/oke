@@ -18,10 +18,12 @@ namespace oke.Datos
             {
                 ConexionMaestra.abrir();
                 SqlCommand cmd = new SqlCommand("insertar_Pedidos", ConexionMaestra.conectar);
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdMesa", parametros.IdMesa);
                 cmd.Parameters.AddWithValue("@IdCancion", parametros.IdCancion);
                 cmd.Parameters.AddWithValue("@Mensaje", parametros.Mensaje);
+
                 cmd.ExecuteNonQuery();
                 return true;
             }

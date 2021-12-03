@@ -31,9 +31,9 @@ namespace oke.Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TomarPedidos));
             this.panelCanciones = new System.Windows.Forms.Panel();
+            this.btnCumpleanos = new System.Windows.Forms.Button();
             this.dataListado = new System.Windows.Forms.DataGridView();
-            this.Pedir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pedir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -42,11 +42,11 @@ namespace oke.Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.panelContenedorMesas = new System.Windows.Forms.FlowLayoutPanel();
             this.panelSaludo = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnPedirC = new System.Windows.Forms.Button();
             this.btnVolverC = new System.Windows.Forms.Button();
+            this.btnPedirC = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSaludo = new System.Windows.Forms.RichTextBox();
-            this.btnCumpleanos = new System.Windows.Forms.Button();
+            this.ColumnTest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCanciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,36 +67,45 @@ namespace oke.Presentacion
             this.panelCanciones.Size = new System.Drawing.Size(741, 371);
             this.panelCanciones.TabIndex = 0;
             // 
+            // btnCumpleanos
+            // 
+            this.btnCumpleanos.BackColor = System.Drawing.Color.Transparent;
+            this.btnCumpleanos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCumpleanos.BackgroundImage")));
+            this.btnCumpleanos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCumpleanos.Location = new System.Drawing.Point(298, 41);
+            this.btnCumpleanos.Name = "btnCumpleanos";
+            this.btnCumpleanos.Size = new System.Drawing.Size(79, 57);
+            this.btnCumpleanos.TabIndex = 5;
+            this.btnCumpleanos.UseVisualStyleBackColor = false;
+            this.btnCumpleanos.Click += new System.EventHandler(this.btnCumpleanos_Click);
+            // 
             // dataListado
             // 
+            this.dataListado.AllowUserToAddRows = false;
             this.dataListado.AllowUserToDeleteRows = false;
             this.dataListado.AllowUserToResizeColumns = false;
             this.dataListado.AllowUserToResizeRows = false;
+            this.dataListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pedir,
-            this.Column1,
-            this.Eliminar});
+            this.Eliminar,
+            this.ColumnTest});
             this.dataListado.Location = new System.Drawing.Point(18, 116);
             this.dataListado.Name = "dataListado";
+            this.dataListado.ReadOnly = true;
+            this.dataListado.RowHeadersVisible = false;
             this.dataListado.Size = new System.Drawing.Size(689, 242);
             this.dataListado.TabIndex = 4;
             this.dataListado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellClick);
-            this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             // 
             // Pedir
             // 
             this.Pedir.HeaderText = "Pedir";
-            this.Pedir.Image = ((System.Drawing.Image)(resources.GetObject("Pedir.Image")));
             this.Pedir.Name = "Pedir";
-            this.Pedir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Pedir.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Pedir.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.Pedir.ReadOnly = true;
+            this.Pedir.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Pedir.Width = 37;
             // 
             // Eliminar
             // 
@@ -104,7 +113,8 @@ namespace oke.Presentacion
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 60;
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 49;
             // 
             // pictureBox1
             // 
@@ -171,6 +181,26 @@ namespace oke.Presentacion
             this.panelSaludo.Size = new System.Drawing.Size(332, 196);
             this.panelSaludo.TabIndex = 2;
             // 
+            // btnVolverC
+            // 
+            this.btnVolverC.Location = new System.Drawing.Point(196, 160);
+            this.btnVolverC.Name = "btnVolverC";
+            this.btnVolverC.Size = new System.Drawing.Size(122, 33);
+            this.btnVolverC.TabIndex = 2;
+            this.btnVolverC.Text = "Volver";
+            this.btnVolverC.UseVisualStyleBackColor = true;
+            this.btnVolverC.Click += new System.EventHandler(this.btnVolverC_Click);
+            // 
+            // btnPedirC
+            // 
+            this.btnPedirC.Location = new System.Drawing.Point(26, 160);
+            this.btnPedirC.Name = "btnPedirC";
+            this.btnPedirC.Size = new System.Drawing.Size(125, 33);
+            this.btnPedirC.TabIndex = 1;
+            this.btnPedirC.Text = "Pedir";
+            this.btnPedirC.UseVisualStyleBackColor = true;
+            this.btnPedirC.Click += new System.EventHandler(this.btnPedirC_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtSaludo);
@@ -183,26 +213,6 @@ namespace oke.Presentacion
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese saludo";
             // 
-            // btnPedirC
-            // 
-            this.btnPedirC.Location = new System.Drawing.Point(26, 160);
-            this.btnPedirC.Name = "btnPedirC";
-            this.btnPedirC.Size = new System.Drawing.Size(125, 33);
-            this.btnPedirC.TabIndex = 1;
-            this.btnPedirC.Text = "Pedir";
-            this.btnPedirC.UseVisualStyleBackColor = true;
-            this.btnPedirC.Click += new System.EventHandler(this.btnPedirC_Click);
-            // 
-            // btnVolverC
-            // 
-            this.btnVolverC.Location = new System.Drawing.Point(196, 160);
-            this.btnVolverC.Name = "btnVolverC";
-            this.btnVolverC.Size = new System.Drawing.Size(122, 33);
-            this.btnVolverC.TabIndex = 2;
-            this.btnVolverC.Text = "Volver";
-            this.btnVolverC.UseVisualStyleBackColor = true;
-            this.btnVolverC.Click += new System.EventHandler(this.btnVolverC_Click);
-            // 
             // txtSaludo
             // 
             this.txtSaludo.Location = new System.Drawing.Point(8, 32);
@@ -211,17 +221,12 @@ namespace oke.Presentacion
             this.txtSaludo.TabIndex = 0;
             this.txtSaludo.Text = "";
             // 
-            // btnCumpleanos
+            // ColumnTest
             // 
-            this.btnCumpleanos.BackColor = System.Drawing.Color.Transparent;
-            this.btnCumpleanos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCumpleanos.BackgroundImage")));
-            this.btnCumpleanos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCumpleanos.Location = new System.Drawing.Point(298, 41);
-            this.btnCumpleanos.Name = "btnCumpleanos";
-            this.btnCumpleanos.Size = new System.Drawing.Size(79, 57);
-            this.btnCumpleanos.TabIndex = 5;
-            this.btnCumpleanos.UseVisualStyleBackColor = false;
-            this.btnCumpleanos.Click += new System.EventHandler(this.btnCumpleanos_Click);
+            this.ColumnTest.HeaderText = "ColumnTest";
+            this.ColumnTest.Name = "ColumnTest";
+            this.ColumnTest.ReadOnly = true;
+            this.ColumnTest.Width = 88;
             // 
             // TomarPedidos
             // 
@@ -256,14 +261,14 @@ namespace oke.Presentacion
         private System.Windows.Forms.Panel panelMesas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel panelContenedorMesas;
-        private System.Windows.Forms.DataGridViewImageColumn Pedir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.Panel panelSaludo;
         private System.Windows.Forms.Button btnVolverC;
         private System.Windows.Forms.Button btnPedirC;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox txtSaludo;
         private System.Windows.Forms.Button btnCumpleanos;
+        private System.Windows.Forms.DataGridViewButtonColumn Pedir;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTest;
     }
 }

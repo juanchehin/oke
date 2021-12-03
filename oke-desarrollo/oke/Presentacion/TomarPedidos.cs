@@ -93,14 +93,20 @@ namespace oke.Presentacion
         {
             dibujarMesas();
         }
-        private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
 
         private void dataListado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idCancion = Convert.ToInt32(dataListado.SelectedCells[1].Value);
+            // MessageBox.Show(dataListado.SelectedColumns[0].ToString());
+            // MessageBox.Show(dataListado.SelectedCells[0].Value.ToString());
+
+            MessageBox.Show("La celda seleccionada es : ");
+            MessageBox.Show(dataListado.Rows[e.RowIndex].Cells["IdCancion"].Value.ToString());
+
+            idCancion = Convert.ToInt32(dataListado.Rows[e.RowIndex].Cells["IdCancion"].Value.ToString());
+
+            MessageBox.Show("IdCancion es : ");
+            MessageBox.Show(idCancion.ToString());
+
             if (e.ColumnIndex == dataListado.Columns["Pedir"].Index)
             {
                 insertar_Pedidos();
@@ -110,9 +116,11 @@ namespace oke.Presentacion
         {
             Lpedidos parametros = new Lpedidos();
             Dpedidos funcion = new Dpedidos();
+
             parametros.IdCancion = idCancion;
             parametros.IdMesa = idMesa;
             parametros.Mensaje = "-";
+
             if (funcion.Insertar_Pedidos(parametros) == true)
             {
                 MessageBox.Show("Pedido realizado");
