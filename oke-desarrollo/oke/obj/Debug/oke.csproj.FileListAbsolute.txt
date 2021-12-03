@@ -11,3 +11,4 @@ C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.pdb
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Catalogo.resources
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Mesas.resources
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.TomarPedidos.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.VerPedidos.resources
