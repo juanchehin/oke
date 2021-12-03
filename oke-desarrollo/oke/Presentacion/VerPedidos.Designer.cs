@@ -30,14 +30,14 @@ namespace oke.Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerPedidos));
-            this.button1 = new System.Windows.Forms.Button();
-            this.panelPedidos = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.PanelPedidos = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCopiar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPedir = new System.Windows.Forms.Button();
+            this.btnDespachar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,21 +47,21 @@ namespace oke.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnEliminar
             // 
-            this.button1.Location = new System.Drawing.Point(7, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Eliminar todo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(7, 7);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(196, 40);
+            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.Text = "Eliminar todo";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // panelPedidos
+            // PanelPedidos
             // 
-            this.panelPedidos.Location = new System.Drawing.Point(3, 173);
-            this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(347, 312);
-            this.panelPedidos.TabIndex = 1;
+            this.PanelPedidos.Location = new System.Drawing.Point(3, 173);
+            this.PanelPedidos.Name = "PanelPedidos";
+            this.PanelPedidos.Size = new System.Drawing.Size(762, 312);
+            this.PanelPedidos.TabIndex = 1;
             // 
             // panel2
             // 
@@ -77,9 +77,9 @@ namespace oke.Presentacion
             // panel3
             // 
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnCopiar);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.btnPedir);
+            this.panel3.Controls.Add(this.btnDespachar);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -100,24 +100,24 @@ namespace oke.Presentacion
             this.label4.Text = "Sonando...";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // btnCopiar
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(145, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 53);
-            this.button2.TabIndex = 548;
-            this.button2.Text = "Copiar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCopiar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCopiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCopiar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCopiar.FlatAppearance.BorderSize = 0;
+            this.btnCopiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCopiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCopiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCopiar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCopiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCopiar.Location = new System.Drawing.Point(145, 0);
+            this.btnCopiar.Name = "btnCopiar";
+            this.btnCopiar.Size = new System.Drawing.Size(131, 53);
+            this.btnCopiar.TabIndex = 548;
+            this.btnCopiar.Text = "Copiar";
+            this.btnCopiar.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
@@ -127,25 +127,25 @@ namespace oke.Presentacion
             this.panel5.Size = new System.Drawing.Size(10, 53);
             this.panel5.TabIndex = 548;
             // 
-            // btnPedir
+            // btnDespachar
             // 
-            this.btnPedir.BackColor = System.Drawing.Color.Transparent;
-            this.btnPedir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPedir.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPedir.FlatAppearance.BorderSize = 0;
-            this.btnPedir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPedir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPedir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedir.ForeColor = System.Drawing.Color.White;
-            this.btnPedir.Location = new System.Drawing.Point(10, 0);
-            this.btnPedir.Margin = new System.Windows.Forms.Padding(300);
-            this.btnPedir.Name = "btnPedir";
-            this.btnPedir.Padding = new System.Windows.Forms.Padding(10, 10, 10, 20);
-            this.btnPedir.Size = new System.Drawing.Size(125, 53);
-            this.btnPedir.TabIndex = 547;
-            this.btnPedir.Text = "Despachar";
-            this.btnPedir.UseVisualStyleBackColor = false;
+            this.btnDespachar.BackColor = System.Drawing.Color.Transparent;
+            this.btnDespachar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDespachar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDespachar.FlatAppearance.BorderSize = 0;
+            this.btnDespachar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDespachar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDespachar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDespachar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespachar.ForeColor = System.Drawing.Color.White;
+            this.btnDespachar.Location = new System.Drawing.Point(10, 0);
+            this.btnDespachar.Margin = new System.Windows.Forms.Padding(300);
+            this.btnDespachar.Name = "btnDespachar";
+            this.btnDespachar.Padding = new System.Windows.Forms.Padding(10, 10, 10, 20);
+            this.btnDespachar.Size = new System.Drawing.Size(125, 53);
+            this.btnDespachar.TabIndex = 547;
+            this.btnDespachar.Text = "Despachar";
+            this.btnDespachar.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -197,10 +197,11 @@ namespace oke.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelPedidos);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PanelPedidos);
+            this.Controls.Add(this.btnEliminar);
             this.Name = "VerPedidos";
             this.Size = new System.Drawing.Size(937, 546);
+            this.Load += new System.EventHandler(this.VerPedidos_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -210,14 +211,14 @@ namespace oke.Presentacion
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel panelPedidos;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.FlowLayoutPanel PanelPedidos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCopiar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnPedir;
+        private System.Windows.Forms.Button btnDespachar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
