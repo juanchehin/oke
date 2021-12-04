@@ -42,9 +42,15 @@ namespace oke.Presentacion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelContenedorCumpleaños = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PanelCumpleaños = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelContenedorCumpleaños.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -60,7 +66,7 @@ namespace oke.Presentacion
             // 
             this.PanelPedidos.Location = new System.Drawing.Point(3, 173);
             this.PanelPedidos.Name = "PanelPedidos";
-            this.PanelPedidos.Size = new System.Drawing.Size(762, 312);
+            this.PanelPedidos.Size = new System.Drawing.Size(549, 316);
             this.PanelPedidos.TabIndex = 1;
             // 
             // panel2
@@ -192,19 +198,58 @@ namespace oke.Presentacion
             this.label2.Text = "Mesa 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelContenedorCumpleaños
+            // 
+            this.panelContenedorCumpleaños.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelContenedorCumpleaños.Controls.Add(this.PanelCumpleaños);
+            this.panelContenedorCumpleaños.Controls.Add(this.panel6);
+            this.panelContenedorCumpleaños.Location = new System.Drawing.Point(514, 173);
+            this.panelContenedorCumpleaños.Name = "panelContenedorCumpleaños";
+            this.panelContenedorCumpleaños.Size = new System.Drawing.Size(611, 346);
+            this.panelContenedorCumpleaños.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Location = new System.Drawing.Point(116, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(302, 87);
+            this.panel6.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(79, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cumpleaños";
+            // 
+            // PanelCumpleaños
+            // 
+            this.PanelCumpleaños.Location = new System.Drawing.Point(6, 109);
+            this.PanelCumpleaños.Name = "PanelCumpleaños";
+            this.PanelCumpleaños.Size = new System.Drawing.Size(798, 167);
+            this.PanelCumpleaños.TabIndex = 1;
+            // 
             // VerPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panelContenedorCumpleaños);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelPedidos);
             this.Controls.Add(this.btnEliminar);
             this.Name = "VerPedidos";
-            this.Size = new System.Drawing.Size(937, 546);
+            this.Size = new System.Drawing.Size(1092, 621);
             this.Load += new System.EventHandler(this.VerPedidos_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelContenedorCumpleaños.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +268,9 @@ namespace oke.Presentacion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelContenedorCumpleaños;
+        private System.Windows.Forms.FlowLayoutPanel PanelCumpleaños;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -20,6 +20,7 @@ namespace oke.Presentacion
         private void VerPedidos_Load(object sender, EventArgs e)
         {
             MostrarPedidos();
+            MostrarCumpleanios();
         }
         public void MostrarPedidos()
         {
@@ -53,8 +54,8 @@ namespace oke.Presentacion
                     btnMesa.ForeColor = Color.White;
                     btnMesa.BackColor = Color.Transparent;
                     btnMesa.TextAlign = ContentAlignment.MiddleCenter;
-                    btnMesa.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
-                    btnMesa.Size = new Size(118, 114);
+                    btnMesa.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                    btnMesa.Size = new Size(100, 100);
                     btnMesa.Dock = DockStyle.Left;
                     btnMesa.FlatStyle = FlatStyle.Flat;
                     // btnMesa.BackgroundImage = Properties.Resources.negro;
@@ -67,8 +68,8 @@ namespace oke.Presentacion
                     LabelCancion.BackColor = Color.Transparent;
                     LabelCancion.TextAlign = ContentAlignment.MiddleCenter;
                     LabelCancion.AutoSize = false;
-                    LabelCancion.Font = new Font("Microsoft Sans Serif", 12);
-                    LabelCancion.Size = new Size(688, 61);
+                    LabelCancion.Font = new Font("Microsoft Sans Serif", 9);
+                    LabelCancion.Size = new Size(660, 60);
                     LabelCancion.Dock = DockStyle.Top;
                     //*************
                     // btnDespachar.BackgroundImage = Properties.Resources.naranja;
@@ -95,7 +96,7 @@ namespace oke.Presentacion
                     btnCopiar.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
                     btnCopiar.Cursor = Cursors.Hand;
                     //*************
-                    btnEliminar.Size = new Size(125, 53);
+                    btnEliminar.Size = new Size(100, 40);
                     btnEliminar.Dock = DockStyle.Right;
                     btnEliminar.BackColor = Color.Transparent;
                     // btnEliminar.BackgroundImage = Properties.Resources.rosa;
@@ -105,7 +106,7 @@ namespace oke.Presentacion
                     btnEliminar.FlatAppearance.MouseOverBackColor = Color.Transparent;
                     btnEliminar.FlatAppearance.BorderSize = 0;
                     btnEliminar.ForeColor = Color.WhiteSmoke;
-                    btnEliminar.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                    btnEliminar.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
                     //*************
                     LabelEstado.ForeColor = Color.FromArgb(255, 179, 0);
                     LabelEstado.BackColor = Color.Transparent;
@@ -118,7 +119,7 @@ namespace oke.Presentacion
                     Panelbotones.Dock = DockStyle.Fill;
                     Panelbotones.BackColor = Color.Transparent;
                     //*************
-                    panelConte.Size = new Size(550, 114);
+                    panelConte.Size = new Size(500, 100);
                     panelConte.BackColor = Color.FromArgb(39, 39, 39);
                     //*************
                     // ImagenSonando.Image = Properties.Resources.musica;
@@ -157,6 +158,145 @@ namespace oke.Presentacion
             catch (Exception ex)
             {
 
+                MessageBox.Show(ex.StackTrace);
+            }
+        }
+
+        public void MostrarCumpleanios()
+        {
+            try
+            {
+                PanelCumpleaños.Controls.Clear();
+                DataTable dt = new DataTable();
+                Dpedidos funcion = new Dpedidos();
+                funcion.MostrarCumpleanios(ref dt);
+                foreach (DataRow rdr in dt.Rows)
+                {
+                    Button btnDespachar = new Button();
+                    Button btnCopiar = new Button();
+                    Button btnMesa = new Button();
+                    Button btnEliminar = new Button();
+                    Label LabelCancion = new Label();
+                    Panel panelConte = new Panel();
+                    Panel Panelbotones = new Panel();
+                    Label LabelEstado = new Label();
+                    PictureBox ImagenSonando = new PictureBox();
+
+                    LabelCancion.Text = rdr["Mensaje"].ToString();
+                    btnMesa.Text = "Mesa " + rdr["Mesa"].ToString();
+                    LabelEstado.Text = rdr["Estado"].ToString();
+                    btnDespachar.Text = "Despachar";
+                    btnCopiar.Text = "copiar";
+                    btnCopiar.Tag = rdr["Mensaje"].ToString();
+                    btnEliminar.Name = rdr["IdPedido"].ToString();
+                    btnEliminar.Text = "Eliminar";
+                    //*************
+                    btnMesa.ForeColor = Color.White;
+                    btnMesa.BackColor = Color.Transparent;
+                    btnMesa.TextAlign = ContentAlignment.MiddleCenter;
+                    btnMesa.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                    btnMesa.Size = new Size(100, 100);
+                    btnMesa.Dock = DockStyle.Left;
+                    btnMesa.FlatStyle = FlatStyle.Flat;
+                    // btnMesa.BackgroundImage = Properties.Resources.negro;
+                    btnMesa.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                    btnMesa.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                    btnMesa.BackgroundImageLayout = ImageLayout.Stretch;
+                    btnMesa.FlatAppearance.BorderSize = 0;
+                    //*************
+                    LabelCancion.ForeColor = Color.White;
+                    LabelCancion.BackColor = Color.Transparent;
+                    LabelCancion.TextAlign = ContentAlignment.MiddleCenter;
+                    LabelCancion.AutoSize = false;
+                    LabelCancion.Font = new Font("Microsoft Sans Serif", 10);
+                    LabelCancion.Size = new Size(660, 50);
+                    LabelCancion.Dock = DockStyle.Top;
+                    //*************
+                    // btnDespachar.BackgroundImage = Properties.Resources.naranja;
+                    btnDespachar.Size = new Size(100, 50);
+                    btnDespachar.Dock = DockStyle.Bottom;
+                    btnDespachar.BackColor = Color.Transparent;
+                    btnDespachar.FlatStyle = FlatStyle.Flat;
+                    btnDespachar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                    btnDespachar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                    btnDespachar.BackgroundImageLayout = ImageLayout.Stretch;
+                    btnDespachar.FlatAppearance.BorderSize = 0;
+                    btnDespachar.ForeColor = Color.White;
+                    btnDespachar.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                    btnDespachar.Name = rdr["IdPedido"].ToString();
+                    //*************
+                    btnCopiar.Size = new Size(60, 50);
+                    btnCopiar.Dock = DockStyle.Fill;
+                    btnCopiar.BackColor = Color.Transparent;
+                    btnCopiar.FlatStyle = FlatStyle.Flat;
+                    btnCopiar.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
+                    btnCopiar.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 25, 25);
+                    btnCopiar.FlatAppearance.BorderSize = 0;
+                    btnCopiar.ForeColor = Color.WhiteSmoke;
+                    btnCopiar.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                    btnCopiar.Cursor = Cursors.Hand;
+                    //*************
+                    btnEliminar.Size = new Size(100, 40);
+                    btnEliminar.Dock = DockStyle.Right;
+                    btnEliminar.BackColor = Color.Transparent;
+                    // btnEliminar.BackgroundImage = Properties.Resources.rosa;
+                    btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
+                    btnEliminar.FlatStyle = FlatStyle.Standard;
+                    btnEliminar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                    btnEliminar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                    btnEliminar.FlatAppearance.BorderSize = 0;
+                    btnEliminar.ForeColor = Color.WhiteSmoke;
+                    btnEliminar.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                    //*************
+                    LabelEstado.ForeColor = Color.FromArgb(255, 179, 0);
+                    LabelEstado.BackColor = Color.Transparent;
+                    LabelEstado.TextAlign = ContentAlignment.MiddleLeft;
+                    LabelEstado.AutoSize = false;
+                    LabelEstado.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+                    LabelEstado.Size = new Size(90, 50);
+                    LabelEstado.Dock = DockStyle.Left;
+                    //*************
+                    Panelbotones.Dock = DockStyle.Fill;
+                    Panelbotones.BackColor = Color.Transparent;
+                    //*************
+                    panelConte.Size = new Size(550, 114);
+                    panelConte.BackColor = Color.FromArgb(39, 39, 39);
+                    //*************
+                    // ImagenSonando.Image = Properties.Resources.musica;
+                    ImagenSonando.SizeMode = PictureBoxSizeMode.Zoom;
+                    ImagenSonando.Dock = DockStyle.Right;
+                    ImagenSonando.BackColor = Color.Transparent;
+                    //****************
+                    if (LabelEstado.Text == "Pendiente")
+                    {
+                        Panelbotones.Controls.Add(btnDespachar);
+                    }
+                    else
+                    {
+                        Panelbotones.Controls.Add(ImagenSonando);
+                        panelConte.BackColor = Color.FromArgb(253, 97, 59);
+                        LabelEstado.ForeColor = Color.White;
+                        btnMesa.BackgroundImage = null;
+
+                    }
+                    Panelbotones.Controls.Add(LabelEstado);
+                    Panelbotones.Controls.Add(btnCopiar);
+                    Panelbotones.Controls.Add(btnEliminar);
+
+                    panelConte.Controls.Add(btnMesa);
+                    panelConte.Controls.Add(LabelCancion);
+                    panelConte.Controls.Add(Panelbotones);
+                    PanelCumpleaños.Controls.Add(panelConte);
+                    LabelCancion.BringToFront();
+                    Panelbotones.BringToFront();
+
+                    // btnDespachar.Click += BtnDespachar_Click;
+                    // btnCopiar.Click += BtnCopiar_Click;
+                    // btnEliminar.Click += BtnEliminar_Click;
+                }
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.StackTrace);
             }
         }

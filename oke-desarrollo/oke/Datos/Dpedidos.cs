@@ -99,6 +99,25 @@ namespace oke.Datos
             }
         }
 
+        public void MostrarCumpleanios(ref DataTable dt)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("mostrarCumpleanos", ConexionMaestra.conectar);
+                da.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
+
         public void ContarPedidosTodos(ref int Total)
         {
             try
