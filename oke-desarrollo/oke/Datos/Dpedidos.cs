@@ -159,5 +159,26 @@ namespace oke.Datos
                 ConexionMaestra.cerrar();
             }
         }
+        public bool EditarEstadoPedido(Lpedidos parametros)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlCommand cmd = new SqlCommand("editarEstadoPedido", ConexionMaestra.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Idpedido", parametros.IdPedido);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
     }
 }

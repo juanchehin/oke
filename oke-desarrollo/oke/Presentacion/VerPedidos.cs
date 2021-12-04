@@ -1,4 +1,5 @@
 ﻿using oke.Datos;
+using oke.Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,8 @@ namespace oke.Presentacion
         {
             InitializeComponent();
         }
+        int Idpedido;
+        string Cancion;
         private void VerPedidos_Load(object sender, EventArgs e)
         {
             MostrarPedidos();
@@ -150,9 +153,9 @@ namespace oke.Presentacion
                     LabelCancion.BringToFront();
                     Panelbotones.BringToFront();
 
-                    // btnDespachar.Click += BtnDespachar_Click;
-                    // btnCopiar.Click += BtnCopiar_Click;
-                    // btnEliminar.Click += BtnEliminar_Click;
+                    btnDespachar.Click += BtnDespachar_Click;
+                    btnCopiar.Click += BtnCopiar_Click;
+                    btnEliminar.Click += BtnEliminar_Click;
                 }
             }
             catch (Exception ex)
@@ -160,6 +163,23 @@ namespace oke.Presentacion
 
                 MessageBox.Show(ex.StackTrace);
             }
+        }
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            Idpedido = Convert.ToInt32(((Button)sender).Name);
+            EliminarPedido();
+        }
+        private void EliminarPedido()
+        {
+            Lpedidos parametros = new Lpedidos();
+            Dpedidos funcion = new Dpedidos();
+            parametros.IdPedido = Idpedido;
+            if (funcion.EliminarPedidos(parametros) == true)
+            {
+                MostrarPedidos();
+                MostrarCumpleanios();
+            }
+
         }
 
         public void MostrarCumpleanios()
@@ -290,14 +310,52 @@ namespace oke.Presentacion
                     LabelCancion.BringToFront();
                     Panelbotones.BringToFront();
 
-                    // btnDespachar.Click += BtnDespachar_Click;
-                    // btnCopiar.Click += BtnCopiar_Click;
-                    // btnEliminar.Click += BtnEliminar_Click;
+                    btnDespachar.Click += BtnDespachar_Click;
+                    btnCopiar.Click += BtnCopiar_Click;
+                    btnEliminar.Click += BtnEliminar_Click;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
+            }
+        }
+
+        private void BtnCopiar_Click(object sender, EventArgs e)
+        {
+            Cancion = ((Button)sender).Tag.ToString();
+            Clipboard.SetText(Cancion);
+        }
+
+        private void BtnDespachar_Click(object sender, EventArgs e)
+        {
+            Idpedido = Convert.ToInt32(((Button)sender).Name);
+            DespacharPedido();
+        }
+        private void DespacharPedido()
+        {
+            Lpedidos parametros = new Lpedidos();
+            Dpedidos funcion = new Dpedidos();
+            parametros.IdPedido = Idpedido;
+            if (funcion.EditarEstadoPedido(parametros) == true)
+            {
+                MostrarPedidos();
+                MostrarCumpleanios();
+            }
+
+        }
+
+        private void btnEliminarTodo_Click(object sender, EventArgs e)
+        {
+            EliminarPedidosTodos();
+        }
+        private void EliminarPedidosTodos()
+        {
+            Dpedidos funcion = new Dpedidos();
+            if (funcion.eliminarPedidosTodos() == true)
+            {
+                MostrarPedidos();
+                MostrarCumpleanios();
             }
         }
     }
