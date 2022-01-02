@@ -29,8 +29,9 @@ namespace oke.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerPedidos));
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEliminarTodo = new System.Windows.Forms.Button();
             this.PanelPedidos = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,9 +44,10 @@ namespace oke.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContenedorCumpleaños = new System.Windows.Forms.Panel();
+            this.PanelCumpleaños = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.PanelCumpleaños = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,14 +55,14 @@ namespace oke.Presentacion
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnEliminar
+            // btnEliminarTodo
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(7, 7);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(196, 40);
-            this.btnEliminar.TabIndex = 0;
-            this.btnEliminar.Text = "Eliminar todo";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminarTodo.Location = new System.Drawing.Point(7, 7);
+            this.btnEliminarTodo.Name = "btnEliminarTodo";
+            this.btnEliminarTodo.Size = new System.Drawing.Size(196, 40);
+            this.btnEliminarTodo.TabIndex = 0;
+            this.btnEliminarTodo.Text = "Eliminar todo";
+            this.btnEliminarTodo.UseVisualStyleBackColor = true;
             // 
             // PanelPedidos
             // 
@@ -208,6 +210,13 @@ namespace oke.Presentacion
             this.panelContenedorCumpleaños.Size = new System.Drawing.Size(611, 346);
             this.panelContenedorCumpleaños.TabIndex = 3;
             // 
+            // PanelCumpleaños
+            // 
+            this.PanelCumpleaños.Location = new System.Drawing.Point(6, 109);
+            this.PanelCumpleaños.Name = "PanelCumpleaños";
+            this.PanelCumpleaños.Size = new System.Drawing.Size(798, 167);
+            this.PanelCumpleaños.TabIndex = 1;
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label1);
@@ -226,12 +235,10 @@ namespace oke.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Cumpleaños";
             // 
-            // PanelCumpleaños
+            // timer1
             // 
-            this.PanelCumpleaños.Location = new System.Drawing.Point(6, 109);
-            this.PanelCumpleaños.Name = "PanelCumpleaños";
-            this.PanelCumpleaños.Size = new System.Drawing.Size(798, 167);
-            this.PanelCumpleaños.TabIndex = 1;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // VerPedidos
             // 
@@ -240,7 +247,7 @@ namespace oke.Presentacion
             this.Controls.Add(this.panelContenedorCumpleaños);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelPedidos);
-            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEliminarTodo);
             this.Name = "VerPedidos";
             this.Size = new System.Drawing.Size(1092, 621);
             this.Load += new System.EventHandler(this.VerPedidos_Load);
@@ -256,7 +263,7 @@ namespace oke.Presentacion
 
         #endregion
 
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEliminarTodo;
         private System.Windows.Forms.FlowLayoutPanel PanelPedidos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -272,5 +279,6 @@ namespace oke.Presentacion
         private System.Windows.Forms.FlowLayoutPanel PanelCumpleaños;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -43,7 +43,7 @@ namespace oke.Datos
             try
             {
                 ConexionMaestra.abrir();
-                SqlCommand cmd = new SqlCommand("eliminar_pedidos", ConexionMaestra.conectar);
+                SqlCommand cmd = new SqlCommand("eliminar_pedido", ConexionMaestra.conectar);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idpedido", parametros.IdPedido);
                 cmd.ExecuteNonQuery();
@@ -174,6 +174,40 @@ namespace oke.Datos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
+        public void ContarCumpleaños(ref int Total)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlCommand cmd = new SqlCommand("select count(IdPedido) from Pedidos inner join Canciones on Canciones.IdCancion = Pedidos.IdCancion Where Nombre = '!Happy Birthday!'", ConexionMaestra.conectar);
+                Total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                Total = 0;
+            }
+            finally
+            {
+                ConexionMaestra.cerrar();
+            }
+        }
+        public void ContarPedidosSinFc(ref int Total)
+        {
+            try
+            {
+                ConexionMaestra.abrir();
+                SqlCommand cmd = new SqlCommand("select count(IdPedido) from Pedidos  inner join Canciones on Canciones.IdCancion = Pedidos.IdCancion Where Nombre<>'!Happy Birthday!'", ConexionMaestra.conectar);
+                Total = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception)
+            {
+                Total = 0;
             }
             finally
             {

@@ -12,3 +12,4 @@ C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Catalogo.resou
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Mesas.resources
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.TomarPedidos.resources
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.VerPedidos.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.SuggestedBindingRedirects.cache

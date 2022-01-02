@@ -23,7 +23,7 @@ namespace oke.Presentacion
         private void VerPedidos_Load(object sender, EventArgs e)
         {
             MostrarPedidos();
-            MostrarCumpleanios();
+            MostrarCumpleaños();
         }
         public void MostrarPedidos()
         {
@@ -177,12 +177,23 @@ namespace oke.Presentacion
             if (funcion.EliminarPedidos(parametros) == true)
             {
                 MostrarPedidos();
-                MostrarCumpleanios();
+                MostrarCumpleaños();
             }
 
         }
+        private void DespacharPedido()
+        {
+            Lpedidos parametros = new Lpedidos();
+            Dpedidos funcion = new Dpedidos();
+            parametros.IdPedido = Idpedido;
+            if (funcion.EditarEstadoPedido(parametros) == true)
+            {
+                MostrarPedidos();
+                MostrarCumpleaños();
+            }
 
-        public void MostrarCumpleanios()
+        }
+        public void MostrarCumpleaños()
         {
             try
             {
@@ -332,18 +343,6 @@ namespace oke.Presentacion
             Idpedido = Convert.ToInt32(((Button)sender).Name);
             DespacharPedido();
         }
-        private void DespacharPedido()
-        {
-            Lpedidos parametros = new Lpedidos();
-            Dpedidos funcion = new Dpedidos();
-            parametros.IdPedido = Idpedido;
-            if (funcion.EditarEstadoPedido(parametros) == true)
-            {
-                MostrarPedidos();
-                MostrarCumpleanios();
-            }
-
-        }
 
         private void btnEliminarTodo_Click(object sender, EventArgs e)
         {
@@ -355,7 +354,37 @@ namespace oke.Presentacion
             if (funcion.eliminarPedidosTodos() == true)
             {
                 MostrarPedidos();
-                MostrarCumpleanios();
+                MostrarCumpleaños();
+            }
+        }
+        private void ActualizarCumpleaños()
+        {
+            int ContadorControlesP;
+            int ContadorPedidos = 0;
+            ContadorControlesP = PanelCumpleaños.Controls.Count;
+            Dpedidos funcion = new Dpedidos();
+            funcion.ContarCumpleaños(ref ContadorPedidos);
+            if (ContadorPedidos > ContadorControlesP)
+            {
+                MostrarCumpleaños();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ActualizarPedidos();
+            ActualizarCumpleaños();
+        }
+        private void ActualizarPedidos()
+        {
+            int ContadorControlesP;
+            int ContadorPedidos = 0;
+            ContadorControlesP = PanelPedidos.Controls.Count;
+            Dpedidos funcion = new Dpedidos();
+            funcion.ContarPedidosSinFc(ref ContadorPedidos);
+            if (ContadorPedidos > ContadorControlesP)
+            {
+                MostrarPedidos();
             }
         }
     }
