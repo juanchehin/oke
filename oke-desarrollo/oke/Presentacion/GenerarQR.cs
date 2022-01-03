@@ -37,10 +37,7 @@ namespace oke.Presentacion
             reportViewer1.Visible = true;
             reportViewer1.Report = rpt;
             reportViewer1.RefreshReport();
-
-
         }
-
         private void EditarIp()
         {
             Lestaciones parametros = new Lestaciones();
@@ -48,10 +45,9 @@ namespace oke.Presentacion
             parametros.Ip = txtIp.Text;
             funcion.EditarIp(parametros);
         }
-
         private void btnGenerar_Click_1(object sender, EventArgs e)
         {
-            //EditarIp();
+            EditarIp();
             GenerarReporte();
         }
     }

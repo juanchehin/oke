@@ -47,7 +47,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(540, 88);
+            this.btnGenerar.Location = new System.Drawing.Point(695, 87);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 1;
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 88);
+            this.label2.Location = new System.Drawing.Point(22, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(280, 13);
             this.label2.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.txtIp.AutoSize = true;
             this.txtIp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIp.Location = new System.Drawing.Point(343, 88);
+            this.txtIp.Location = new System.Drawing.Point(308, 84);
             this.txtIp.Name = "txtIp";
             this.txtIp.Size = new System.Drawing.Size(122, 18);
             this.txtIp.TabIndex = 3;
@@ -77,10 +77,12 @@
             // reportViewer1
             // 
             this.reportViewer1.AccessibilityKeyMap = null;
-            this.reportViewer1.Location = new System.Drawing.Point(50, 117);
+            this.reportViewer1.Location = new System.Drawing.Point(25, 117);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(585, 381);
+            this.reportViewer1.Size = new System.Drawing.Size(745, 513);
             this.reportViewer1.TabIndex = 4;
+            this.reportViewer1.ViewMode = Telerik.ReportViewer.WinForms.ViewMode.PrintPreview;
+            this.reportViewer1.Visible = false;
             // 
             // GenerarQR
             // 
@@ -92,7 +94,7 @@
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.label1);
             this.Name = "GenerarQR";
-            this.Size = new System.Drawing.Size(717, 521);
+            this.Size = new System.Drawing.Size(796, 657);
             this.Load += new System.EventHandler(this.GenerarQR_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

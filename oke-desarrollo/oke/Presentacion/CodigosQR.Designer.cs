@@ -12,8 +12,8 @@ namespace oke.Presentacion
             Telerik.Reporting.Barcodes.QRCodeEncoder qrCodeEncoder1 = new Telerik.Reporting.Barcodes.QRCodeEncoder();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
-            this.detail = new Telerik.Reporting.DetailSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
+            this.detail = new Telerik.Reporting.DetailSection();
             this.panel1 = new Telerik.Reporting.Panel();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
@@ -27,13 +27,6 @@ namespace oke.Presentacion
             this.textBox1});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
             // 
-            // detail
-            // 
-            this.detail.Height = Telerik.Reporting.Drawing.Unit.Cm(6.2D);
-            this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.panel1});
-            this.detail.Name = "detail";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.1D), Telerik.Reporting.Drawing.Unit.Cm(1D));
@@ -42,15 +35,23 @@ namespace oke.Presentacion
             this.textBox1.Style.Font.Bold = true;
             this.textBox1.Value = "Codigo QR para las mesas";
             // 
+            // detail
+            // 
+            this.detail.Height = Telerik.Reporting.Drawing.Unit.Cm(6.2D);
+            this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.panel1});
+            this.detail.Name = "detail";
+            // 
             // panel1
             // 
             this.panel1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox2,
             this.textBox3,
             this.barcode1});
-            this.panel1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.7D), Telerik.Reporting.Drawing.Unit.Cm(0.3D));
+            this.panel1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.45D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
             this.panel1.Name = "panel1";
             this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.1D), Telerik.Reporting.Drawing.Unit.Cm(5D));
+            this.panel1.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Dotted;
             // 
             // textBox2
             // 
@@ -90,6 +91,7 @@ namespace oke.Presentacion
             this.pageHeaderSection1,
             this.detail});
             this.Name = "CodigosQR";
+            this.PageSettings.ColumnCount = 4;
             this.PageSettings.ContinuousPaper = false;
             this.PageSettings.Landscape = false;
             this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Mm(5D), Telerik.Reporting.Drawing.Unit.Mm(5D), Telerik.Reporting.Drawing.Unit.Mm(5D), Telerik.Reporting.Drawing.Unit.Mm(5D));
@@ -101,7 +103,7 @@ namespace oke.Presentacion
             styleRule1.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Point(2D);
             this.StyleSheet.AddRange(new Telerik.Reporting.Drawing.StyleRule[] {
             styleRule1});
-            this.Width = Telerik.Reporting.Drawing.Unit.Cm(17D);
+            this.Width = Telerik.Reporting.Drawing.Unit.Cm(5D);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
