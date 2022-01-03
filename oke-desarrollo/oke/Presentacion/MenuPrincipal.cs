@@ -71,5 +71,14 @@ namespace oke.Presentacion
             control.Dock = DockStyle.Fill;
             panelPadre.Controls.Add(control);
         }
+
+        private void btnGenerarQR_Click(object sender, EventArgs e)
+        {
+            panelPadre.Controls.Clear();
+            GenerarQR control = new GenerarQR();
+            control.Dock = DockStyle.Fill;
+            panelPadre.Controls.Add(control);
+            // SeleccionarButton(sender);
+        }
     }
 }

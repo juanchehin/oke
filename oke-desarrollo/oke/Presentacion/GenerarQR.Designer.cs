@@ -31,7 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblIP = new System.Windows.Forms.Label();
+            this.txtIp = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // label1
@@ -46,42 +47,53 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(540, 146);
+            this.btnGenerar.Location = new System.Drawing.Point(540, 88);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 1;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 146);
+            this.label2.Location = new System.Drawing.Point(47, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(280, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Esta es la IP de tu PC, servira para que la app se conecte";
             // 
-            // lblIP
+            // txtIp
             // 
-            this.lblIP.AutoSize = true;
-            this.lblIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIP.Location = new System.Drawing.Point(343, 146);
-            this.lblIP.Name = "lblIP";
-            this.lblIP.Size = new System.Drawing.Size(122, 18);
-            this.lblIP.TabIndex = 3;
-            this.lblIP.Text = "192.168.10.100";
+            this.txtIp.AutoSize = true;
+            this.txtIp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIp.Location = new System.Drawing.Point(343, 88);
+            this.txtIp.Name = "txtIp";
+            this.txtIp.Size = new System.Drawing.Size(122, 18);
+            this.txtIp.TabIndex = 3;
+            this.txtIp.Text = "192.168.10.100";
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.AccessibilityKeyMap = null;
+            this.reportViewer1.Location = new System.Drawing.Point(50, 117);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(585, 381);
+            this.reportViewer1.TabIndex = 4;
             // 
             // GenerarQR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblIP);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.txtIp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.label1);
             this.Name = "GenerarQR";
-            this.Size = new System.Drawing.Size(677, 224);
+            this.Size = new System.Drawing.Size(717, 521);
+            this.Load += new System.EventHandler(this.GenerarQR_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,6 +104,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblIP;
+        private System.Windows.Forms.Label txtIp;
+        private Telerik.ReportViewer.WinForms.ReportViewer reportViewer1;
     }
 }

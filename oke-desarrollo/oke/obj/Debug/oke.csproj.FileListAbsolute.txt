@@ -13,3 +13,13 @@ C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.Mesas.resource
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.TomarPedidos.resources
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.VerPedidos.resources
 C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.SuggestedBindingRedirects.cache
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\Telerik.Reporting.dll
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\Telerik.ReportViewer.WinForms.dll
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\Telerik.Reporting.pdb
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\Telerik.Reporting.xml
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Programacion\oke\oke-desarrollo\oke\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.CodigosQR.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.Presentacion.GenerarQR.resources
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.exe.licenses
+C:\Programacion\oke\oke-desarrollo\oke\obj\Debug\oke.csproj.CopyComplete

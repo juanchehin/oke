@@ -192,6 +192,7 @@ namespace oke.Presentacion
             this.btnGenerarQR.Text = "Generar QR";
             this.btnGenerarQR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarQR.UseVisualStyleBackColor = false;
+            this.btnGenerarQR.Click += new System.EventHandler(this.btnGenerarQR_Click);
             // 
             // btnPedir
             // 
