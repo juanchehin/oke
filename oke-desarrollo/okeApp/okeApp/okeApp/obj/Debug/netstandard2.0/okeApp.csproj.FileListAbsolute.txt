@@ -1,0 +1,15 @@
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\bin\Debug\netstandard2.0\okeApp.deps.json
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\bin\Debug\netstandard2.0\okeApp.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\bin\Debug\netstandard2.0\ref\okeApp.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\bin\Debug\netstandard2.0\okeApp.pdb
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.csproj.AssemblyReference.cache
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.AssemblyInfoInputs.cache
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.AssemblyInfo.cs
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.csproj.CoreCompileInputs.cache
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\ref\okeApp.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.pdb
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\Vistas\Introduccion.xaml.g.cs
