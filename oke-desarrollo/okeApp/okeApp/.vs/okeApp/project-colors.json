@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d6a3310d-97db-4076-a5e4-771c279cfdc2": {
+      "ProjectGuid": "d6a3310d-97db-4076-a5e4-771c279cfdc2",
+      "DisplayName": "okeApp",
+      "ColorIndex": 0
+    },
+    "d62f83f0-de20-428d-ad08-af521da387fe": {
+      "ProjectGuid": "d62f83f0-de20-428d-ad08-af521da387fe",
+      "DisplayName": "okeApp.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

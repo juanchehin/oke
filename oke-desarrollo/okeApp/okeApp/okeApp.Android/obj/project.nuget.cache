@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q++Dx6uzIrBzB42883XWKjrpYOflb3/rIJ2TiC1F21RYaoqnka2fyqjoSKuSRXLdM4vcBjCFenJgubL09TkfZw==",
+  "dgSpecHash": "X94qDwRf3Hwp/P9RL/BkoRXv+3f7/J0C0XwXBL4NTDQqY+9A9NwnnRYe5qUjajlTcqJzmMRXSevmm43sirUt0w==",
   "success": true,
   "projectFilePath": "C:\\Programacion\\oke\\oke-desarrollo\\okeApp\\okeApp\\okeApp.Android\\okeApp.Android.csproj",
   "expectedPackageFiles": [
@@ -59,7 +59,7 @@
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.8\\xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

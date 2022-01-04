@@ -13,3 +13,4 @@ C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0
 C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\ref\okeApp.dll
 C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\okeApp.pdb
 C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\Vistas\Introduccion.xaml.g.cs
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp\obj\Debug\netstandard2.0\Vistas\Pedidos.xaml.g.cs
