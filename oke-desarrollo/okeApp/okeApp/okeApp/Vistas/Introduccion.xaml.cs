@@ -15,6 +15,34 @@ namespace okeApp.Vistas
         public Introduccion()
         {
             InitializeComponent();
+            Animacion();
+        }
+        public async Task Animacion()
+        {
+            imgLogo.Opacity = 0;
+            await imgLogo.FadeTo(1, 2000);
+            ProbarConexion();
+        }
+        private void ProbarConexion()
+        {
+            try
+            {
+                VMcanciones funcion = new VMcanciones();
+                funcion.ComprobarConexion(ref Idcancion);
+            }
+            catch (Exception)
+            {
+                Idcancion = 0;
+            }
+            if (Idcancion > 0)
+            {
+                Application.Current.MainPage = new NavigationPage(new Pedidos());
+
+            }
+            else
+            {
+                Application.Current.MainPage = new NavigationPage(new PedidoIP());
+            }
         }
     }
 }
