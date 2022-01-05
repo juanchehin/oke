@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "M18JPc6XyWibtE4YL74Nj8jYNJYO3SREljGF+U+CefhBhjGDO5tSP9QlNsguv32y+PqZ4CEdeP6871h32Sc1bg==",
+  "dgSpecHash": "IG1/hjtFQ4PnPzvNLwDZqtbk2F2y5O4rtKtZhPNZeofgk/NHp2XRe2Mh0v+3Q+cth6a2591xszv/6gSxwNBUig==",
   "success": true,
   "projectFilePath": "C:\\Programacion\\oke\\oke-desarrollo\\okeApp\\okeApp\\okeApp.iOS\\okeApp.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Chehin\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512"

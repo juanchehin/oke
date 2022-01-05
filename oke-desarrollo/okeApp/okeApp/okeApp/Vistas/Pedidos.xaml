@@ -46,6 +46,12 @@
                        Text="Elija una cancion y luego escanee el codigo QR de su mesa" 
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"/>
+                <Entry Grid.Row="1" Grid.Column="0"
+                       TextColor="White" Placeholder="Buscar..."
+                       PlaceholderColor="WhiteSmoke"
+                       Margin="8,0,0,0"
+                       x:Name="txtBuscar" PropertyChanged="txtBuscar_PropertyChanged"
+                       FontAttributes="Bold" />
                 <Button Grid.Row="1" Grid.Column="1"
                         Text="Cumpleaños" BackgroundColor="#F46D44" 
                         FontAttributes="Bold" TextColor="White" CornerRadius="10" 

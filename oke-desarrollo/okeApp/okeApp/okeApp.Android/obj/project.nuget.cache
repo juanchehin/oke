@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "X94qDwRf3Hwp/P9RL/BkoRXv+3f7/J0C0XwXBL4NTDQqY+9A9NwnnRYe5qUjajlTcqJzmMRXSevmm43sirUt0w==",
+  "dgSpecHash": "mXZ05wmrv9adTgU/eSafkYEzBVTaTV05mI52fwhuzehEVa0iZITfehYFa0RThmmE6rVH+V54h/dv5UqghaA1NQ==",
   "success": true,
   "projectFilePath": "C:\\Programacion\\oke\\oke-desarrollo\\okeApp\\okeApp\\okeApp.Android\\okeApp.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Chehin\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
