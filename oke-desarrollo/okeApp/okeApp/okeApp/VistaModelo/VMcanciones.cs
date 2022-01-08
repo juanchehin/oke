@@ -13,17 +13,21 @@ namespace okeApp.VistaModelo
 	{
 		public void buscarCanciones(ref DataTable dt, string buscador)
 		{
+			if(buscador == null)
+            {
+                buscador = "";
+            }
 			try
 			{
 				ConexionMaestra.abrir();
-				SqlDataAdapter da = new SqlDataAdapter("buscarCanciones", ConexionMaestra.conectar);
+				SqlDataAdapter da = new SqlDataAdapter("buscar_canciones", ConexionMaestra.conectar);
 				da.SelectCommand.CommandType = CommandType.StoredProcedure;
 				da.SelectCommand.Parameters.AddWithValue("@letra", buscador);
 				da.Fill(dt);
 			}
-			catch (Exception)
+			catch (Exception e)
 			{
-
+				Console.WriteLine("Exepcion : " + e);
 			}
 			finally
 			{

@@ -628,3 +628,8 @@ C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\st
 C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\android\assets\System.Data.SqlClient.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\android\assets\I18N.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\android\assets\I18N.pdb
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\android\assets\I18N.West.dll
+C:\Programacion\oke\oke-desarrollo\okeApp\okeApp\okeApp.Android\obj\Debug\120\android\assets\I18N.West.pdb
