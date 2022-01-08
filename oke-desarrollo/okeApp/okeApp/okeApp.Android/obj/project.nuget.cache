@@ -1,11 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "mXZ05wmrv9adTgU/eSafkYEzBVTaTV05mI52fwhuzehEVa0iZITfehYFa0RThmmE6rVH+V54h/dv5UqghaA1NQ==",
+  "dgSpecHash": "MrS3OYR9LGBALITEVXFSNBkJZsLF1JHASLzdfQTNtQBCmytfIv1rVwQHF50PmesWlp7Bp5lPevrR1BqrTCve1w==",
   "success": true,
   "projectFilePath": "C:\\Programacion\\oke\\oke-desarrollo\\okeApp\\okeApp\\okeApp.Android\\okeApp.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Chehin\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.annotations\\25.4.0.2\\xamarin.android.support.annotations.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.compat\\25.4.0.2\\xamarin.android.support.compat.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.core.ui\\25.4.0.2\\xamarin.android.support.core.ui.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.core.utils\\25.4.0.2\\xamarin.android.support.core.utils.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.fragment\\25.4.0.2\\xamarin.android.support.fragment.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.media.compat\\25.4.0.2\\xamarin.android.support.media.compat.25.4.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.android.support.v4\\25.4.0.2\\xamarin.android.support.v4.25.4.0.2.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",
@@ -62,7 +70,9 @@
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
-    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

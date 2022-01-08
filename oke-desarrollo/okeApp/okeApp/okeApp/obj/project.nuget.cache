@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XmvWUYjJgosskm3BKzzCz6QWyD6Hur49qaOM8A8gEjxz/IeO/de1p9m95RZBZiQz9WF9F2dSF9U5VkEVn35NtQ==",
+  "dgSpecHash": "KB70KxdTMlsk+Fy8lYA4TEzXi4eCuOyCKSbl94+OOA4w7qEkKPLtS4E9a9fPTspuelqOPzCZ5B1PitVtwCOMfg==",
   "success": true,
   "projectFilePath": "C:\\Programacion\\oke\\oke-desarrollo\\okeApp\\okeApp\\okeApp\\okeApp.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,9 @@
     "C:\\Users\\Chehin\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512"
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

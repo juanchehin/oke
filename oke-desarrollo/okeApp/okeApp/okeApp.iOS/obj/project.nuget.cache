@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "IG1/hjtFQ4PnPzvNLwDZqtbk2F2y5O4rtKtZhPNZeofgk/NHp2XRe2Mh0v+3Q+cth6a2591xszv/6gSxwNBUig==",
+  "dgSpecHash": "jkZ6mGoKeF/OSPK4nmghlIRVqHsjjpM4KLDg9ZG2OiNTdVFgrrM/D4ly1bfl0AgIyeXoKbr3TnpmRmlSc1c+XA==",
   "success": true,
   "projectFilePath": "C:\\Programacion\\oke\\oke-desarrollo\\okeApp\\okeApp\\okeApp.iOS\\okeApp.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Chehin\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512"
+    "C:\\Users\\Chehin\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Chehin\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -11,7 +11,7 @@ namespace okeApp
         {
             InitializeComponent();
             Device.SetFlags(new[] { "Brush_Experimental" });
-            MainPage = new Pedidos();
+            MainPage = new Introduccion();
         }
 
         protected override void OnStart()

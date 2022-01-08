@@ -21,6 +21,7 @@ namespace okeApp.Vistas
         {
             imgLogo.Opacity = 0;
             await imgLogo.FadeTo(1, 2000);
+            Application.Current.MainPage = new NavigationPage(new Pedidos());
             //ProbarConexion();
         }
         /*private void ProbarConexion()

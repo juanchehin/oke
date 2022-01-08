@@ -84,6 +84,7 @@
                                         TextColor="#FF7F00"
                                         Margin="2"
                                         CommandParameter="{Binding IdCancion}"
+                                        Clicked="btnPedir_Clicked"
                                         />
                                 <Label Grid.Column="1" TextColor="White"
                                        Text="{Binding Nombre}"/>
