@@ -130,5 +130,11 @@ namespace okeApp.Vistas
             await Task.Run(() => { Interlocked.Exchange(ref this.TimerCancelar, new CancellationTokenSource()).Cancel(); });
 
         }
+
+        private void btnFelizcumple_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FelizCumple());
+
+        }
     }
 }

@@ -56,6 +56,7 @@
                         Text="Cumpleaños" BackgroundColor="#F46D44" 
                         FontAttributes="Bold" TextColor="White" CornerRadius="10" 
                        x:Name="btnFelizcumple" Margin="0,0,10,4"
+                        Clicked="btnFelizcumple_Clicked"
                         />
             </Grid>
             <ListView Grid.Row="1" x:Name="PanelCanciones"
