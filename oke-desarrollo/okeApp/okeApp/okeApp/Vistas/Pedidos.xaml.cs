@@ -95,12 +95,13 @@ namespace okeApp.Vistas
             parametros.IdMesa = IdMesa;
             if (funcion.Insertar_Pedidos(parametros) == true)
             {
-                await PopupNavigation.Instance.PushAsync(new PedidoRealizado());
+                DisplayAlert("Registrado", "Pedido registrado", "OK");
+                // await PopupNavigation.Instance.PushAsync(new PedidoRealizado());
             }
-            else
+            /*else
             {
                 await PopupNavigation.Instance.PushAsync(new LimitePedidos());
-            }
+            }*/
         }
         public void BuscarCanciones()
         {
@@ -119,8 +120,7 @@ namespace okeApp.Vistas
         {
             BuscarCanciones();
         }
-
-        private void btnPedir_Clicked(object sender, EventArgs e)
+        private async void btnPedir_ClickedAsync(object sender, EventArgs e)
         {
             IdCancion = Convert.ToInt32((sender as Button).CommandParameter.ToString());
             await EscannerFlash(true);
