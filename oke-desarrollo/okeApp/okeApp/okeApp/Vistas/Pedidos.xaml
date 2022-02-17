@@ -7,8 +7,11 @@
              x:Class="okeApp.Vistas.Pedidos" BackgroundColor="#121212">
     <ContentPage.ToolbarItems >
 
-        <ToolbarItem Text="Oke"
+        <ToolbarItem Text="Luxor"
                      Order="Primary"/>
+        <ToolbarItem Text="Acerca de" x:Name="btnAcercade"
+                     Order="Secondary"
+                     Clicked="btnAcercade_Clicked"/>
         
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
