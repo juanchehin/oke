@@ -131,15 +131,15 @@ namespace okeApp.Vistas
 
         }
 
-        private async void btnFelizcumple_Clicked(object sender, EventArgs e)
+        private void btnFelizcumple_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new FelizCumple());
+   
         }
 
-        private void btnAcercade_Clicked(object sender, EventArgs e)
+        private async void btnAcercade_Clicked(object sender, EventArgs e)
         {
-            // await PopupNavigation.Instance.PushAsync(new AcercaDe());
-            DisplayAlert("Hola","Acerca de","Ok");
+            await PopupNavigation.Instance.PushAsync(new AcercaDe());
         }
     }
 }
