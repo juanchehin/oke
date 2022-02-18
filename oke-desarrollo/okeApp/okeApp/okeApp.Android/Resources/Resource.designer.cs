@@ -20261,22 +20261,25 @@ namespace okeApp.Droid
 			public const int notify_panel_notification_icon_bg = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int okeLogo = 2131165324;
+			public const int oke = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int preference_list_divider_material = 2131165325;
+			public const int okeLogo = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int test_custom_background = 2131165326;
+			public const int preference_list_divider_material = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int tooltip_frame_dark = 2131165327;
+			public const int test_custom_background = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int tooltip_frame_light = 2131165328;
+			public const int tooltip_frame_dark = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int triste = 2131165329;
+			public const int tooltip_frame_light = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int triste = 2131165330;
 			
 			static Drawable()
 			{
@@ -22412,6 +22415,9 @@ namespace okeApp.Droid
 			
 			// aapt resource value: 0x7F0C0002
 			public const int launcher_foreground = 2131492866;
+			
+			// aapt resource value: 0x7F0C0003
+			public const int oke = 2131492867;
 			
 			static Mipmap()
 			{
