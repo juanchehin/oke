@@ -37,6 +37,15 @@
                           TextColor="White" PlaceholderColor="WhiteSmoke"
                            HorizontalTextAlignment="Center" FontSize="30"/>
                 </Frame>
+                <Frame Grid.Row="1" BackgroundColor="Transparent" WidthRequest="250" HeightRequest="150"
+                      BorderColor="Transparent" >
+                    <Button CornerRadius="10" x:Name="btnPedir"
+                            Clicked="btnPedir_Clicked" Text="Pedir"
+                           WidthRequest="150" HeightRequest="80" 
+                            BackgroundColor="#E83928" VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                           TextColor="White" FontAttributes="Bold"/>
+                </Frame>
             </Grid>
         </Grid>
     </ContentPage.Content>

@@ -1,5 +1,6 @@
 ﻿using okeApp.Modelo;
 using okeApp.VistaModelo;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -131,10 +132,10 @@ namespace okeApp.Vistas
 
         }
 
-        private void btnFelizcumple_Clicked(object sender, EventArgs e)
+        private async void btnFelizcumple_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new FelizCumple());
-
+            // Navigation.PushAsync(new FelizCumple());
+            await PopupNavigation.Instance.PushAsync(new LimitePedidos());
         }
 
         private void btnAcercade_Clicked(object sender, EventArgs e)
