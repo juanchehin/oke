@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="okeApp.Vistas.PedidoIP" BackgroundColor="#1E1E1E">
+    <ContentPage.Content>
+        <Frame Margin="20"
+               CornerRadius="10">
+            <Frame.Background >
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#F54B30"
+                                  Offset="0.1"/>
+                    <GradientStop Color="#E83928"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+
+            </Frame.Background>
+            <StackLayout HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand" >
+                <Image Source="okeLogo.png" HeightRequest="100"
+                       WidthRequest="150" />
+                <Label Text="Elija una forma de conexión"
+                       TextColor="White" FontAttributes="Bold"
+                       FontSize="24" HorizontalOptions="Center"/>
+                <Button x:Name="btnEscanear" Text="Escanear codigo QR"
+                        Clicked="btnEscanear_ClickedAsync"
+                         BackgroundColor="#E83928"
+                       TextColor="White" FontAttributes="Bold"
+                       CornerRadius="10" />
+                <Entry x:Name="txtconexion" 
+                      Placeholder="ó ingrese la Ip manualmente"
+                       TextColor="White"
+                      PlaceholderColor="WhiteSmoke" 
+                       />
+                <Button Text="Conectar" 
+                        BackgroundColor="#1D2A3A"
+                        x:Name="btnConectar"
+                        Clicked="btnConectar_Clicked"
+                       CornerRadius="10"
+                       TextColor="White" 
+                        FontAttributes="Bold" />
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

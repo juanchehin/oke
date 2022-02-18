@@ -1,39 +1,15 @@
 ﻿using okeApp.Modelo;
 using okeApp.Servicios;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace okeApp.VistaModelo
 {
 	public class VMcanciones
 	{
-		public void buscarCanciones(ref DataTable dt, string buscador)
-		{
-			if(buscador == null)
-            {
-                buscador = "";
-            }
-			try
-			{
-				ConexionMaestra.abrir();
-				SqlDataAdapter da = new SqlDataAdapter("buscar_canciones", ConexionMaestra.conectar);
-				da.SelectCommand.CommandType = CommandType.StoredProcedure;
-				da.SelectCommand.Parameters.AddWithValue("@letra", buscador);
-				da.Fill(dt);
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine("Exepcion : " + e);
-			}
-			finally
-			{
-				ConexionMaestra.cerrar();
-			}
-		}
+		
 		public ObservableCollection<Mcanciones> ListarBuscarCanciones(string buscador)
 		{
 			ObservableCollection<Mcanciones> Canciones = new ObservableCollection<Mcanciones>();
@@ -57,6 +33,29 @@ namespace okeApp.VistaModelo
 			}
 			return null;
 		}
+		public void buscarCanciones(ref DataTable dt, string buscador)
+		{
+			if (buscador == null)
+			{
+				buscador = "";
+			}
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("buscar_canciones", ConexionMaestra.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@letra", buscador);
+				da.Fill(dt);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine("Exepcion : " + e);
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
 		public void ComprobarConexion(ref int Id)
 		{
 			try
@@ -68,8 +67,6 @@ namespace okeApp.VistaModelo
 			catch (Exception)
 			{
 				Id = 0;
-
-
 			}
 			finally
 			{

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using okeApp.VistaModelo;
+using System;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,25 +14,29 @@ namespace okeApp.Vistas
             InitializeComponent();
             Animacion();
         }
+        int IdCancion = 0;
+        bool retorno = false;
         public async Task Animacion()
         {
             imgLogo.Opacity = 0;
             await imgLogo.FadeTo(1, 2000);
-            Application.Current.MainPage = new NavigationPage(new Pedidos());
-            //ProbarConexion();
+            // Application.Current.MainPage = new NavigationPage(new Pedidos());
+            ProbarConexion();
         }
-        /*private void ProbarConexion()
+        private void ProbarConexion()
         {
             try
             {
-                VMcanciones funcion = new VMcanciones();
-                funcion.ComprobarConexion(ref Idcancion);
+                // VMcanciones funcion = new VMcanciones();
+                PedidoIP funcion = new PedidoIP();
+
+                retorno = funcion.crear_archivo();
             }
             catch (Exception)
             {
-                Idcancion = 0;
+                IdCancion = 0;
             }
-            if (Idcancion > 0)
+            if (retorno == false)
             {
                 Application.Current.MainPage = new NavigationPage(new Pedidos());
 
@@ -44,6 +45,6 @@ namespace okeApp.Vistas
             {
                 Application.Current.MainPage = new NavigationPage(new PedidoIP());
             }
-        }*/
+        }
     }
 }
