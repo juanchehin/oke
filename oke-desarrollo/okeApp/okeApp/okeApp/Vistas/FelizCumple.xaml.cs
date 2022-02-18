@@ -1,5 +1,6 @@
 ﻿using okeApp.Modelo;
 using okeApp.VistaModelo;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -100,7 +101,7 @@ namespace okeApp.Vistas
             parametros.Mensaje = txtSaludo.Text;
             if (funcion.insertar_cumpleanios(parametros) == true)
             {
-                // await PopupNavigation.Instance.PushAsync(new PedidoRealizado());
+                await PopupNavigation.Instance.PushAsync(new PedidoRealizado());
                 await Navigation.PopAsync();
             }
         }
