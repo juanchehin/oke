@@ -104,7 +104,7 @@ namespace oke.Datos
             try
             {
                 ConexionMaestra.abrir();
-                SqlDataAdapter da = new SqlDataAdapter("mostrarCumpleanos", ConexionMaestra.conectar);
+                SqlDataAdapter da = new SqlDataAdapter("mostrarCumpleanios", ConexionMaestra.conectar);
                 da.Fill(dt);
 
             }

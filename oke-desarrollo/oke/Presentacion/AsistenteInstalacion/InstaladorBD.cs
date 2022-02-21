@@ -1,15 +1,10 @@
 ﻿using oke.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -40,7 +35,7 @@ namespace oke.Presentacion.AsistenteInstalacion
 
         private void centrarPaneles()
         {
-            panelInstalandoServidor.Location = new Point((Width - Panel2.Width) / 2, (Height - Panel2.Height) / 2);
+            panelInstalandoServidor.Location = new Point((Width - panelInstalandoServidor.Width) / 2, (Height - panelInstalandoServidor.Height) / 2);
             Cursor = Cursors.WaitCursor;
             //Panel4.Visible = false;
             //Panel4.Dock = DockStyle.None;
@@ -76,7 +71,7 @@ namespace oke.Presentacion.AsistenteInstalacion
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
-                SavetoXML(aes.Encrypt("Data Source=" + txtservidor.Text + ";Initial Catalog=" + TXTbasededatos.Text + ";Integrated Security=True", Logica.Desencryptacion.appPwdUnique, int.Parse("256")));
+                SavetoXML(aes.Encrypt("Data Source=" + txtservidor.Text + ";Initial Catalog=" + TXTbasededatos.Text + ";Integrated Security=True", Logica.Desencriptacion.appPwdUnique, int.Parse("256")));
                 EjecutarScript();
                 //Panel4.Visible = true;
                 //Panel4.Dock = DockStyle.Fill;
@@ -88,11 +83,11 @@ namespace oke.Presentacion.AsistenteInstalacion
             catch (Exception ex)
             {
                 this.Cursor = Cursors.Default;
-                Panel6.Visible = true;
-                btnInstalarServidor.Visible = true;
-                Panel4.Visible = false;
-                Panel4.Dock = DockStyle.None;
-                lblbuscador_de_servidores.Text = "De click a Instalar Servidor, luego de click a SI cuando se le pida, luego presione ACEPTAR y espere por favor ";
+                //Panel6.Visible = true;
+                //btnInstalarServidor.Visible = true;
+                //Panel4.Visible = false;
+                //Panel4.Dock = DockStyle.None;
+                //lblbuscador_de_servidores.Text = "De click a Instalar Servidor, luego de click a SI cuando se le pida, luego presione ACEPTAR y espere por favor ";
             }
 
 
@@ -188,7 +183,7 @@ namespace oke.Presentacion.AsistenteInstalacion
             if (milisegundo1 == 60)
             {
                 segundos1 += 1;
-                seg.Text = Convert.ToString(segundos1);
+                //seg.Text = Convert.ToString(segundos1);
 
                 milisegundo1 = 0;
 
@@ -198,7 +193,7 @@ namespace oke.Presentacion.AsistenteInstalacion
             {
                 minutos1 += 1;
 
-                min.Text = Convert.ToString(minutos1);
+                //min.Text = Convert.ToString(minutos1);
                 segundos1 = 0;
             }
 
@@ -221,7 +216,7 @@ namespace oke.Presentacion.AsistenteInstalacion
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
-                SavetoXML(aes.Encrypt("Data Source=" + txtservidor.Text + ";Initial Catalog=" + TXTbasededatos.Text + ";Integrated Security=True", Logica.Desencryptacion.appPwdUnique, int.Parse("256")));
+                SavetoXML(aes.Encrypt("Data Source=" + txtservidor.Text + ";Initial Catalog=" + TXTbasededatos.Text + ";Integrated Security=True", Logica.Desencriptacion.appPwdUnique, int.Parse("256")));
                 EjecutarScript();
                 timer4.Start();
             }
@@ -267,7 +262,7 @@ namespace oke.Presentacion.AsistenteInstalacion
             if (milisegundo1 == 60)
             {
                 segundos1 += 1;
-                seg.Text = Convert.ToString(segundos1);
+                //seg.Text = Convert.ToString(segundos1);
 
                 milisegundo1 = 0;
 
@@ -277,7 +272,7 @@ namespace oke.Presentacion.AsistenteInstalacion
             {
                 minutos1 += 1;
 
-                min.Text = Convert.ToString(minutos1);
+                //min.Text = Convert.ToString(minutos1);
                 segundos1 = 0;
             }
 
@@ -387,10 +382,10 @@ namespace oke.Presentacion.AsistenteInstalacion
         }
         private void Conectar()
         {
-            if (btnInstalarServidor.Visible == true)
-            {
+            //if (btnInstalarServidor.Visible == true)
+            //{
                 comprobar_si_ya_hay_servidor_instalado_SQL_NORMAL();
-            }
+            //}
         }
         private void comprobar_si_ya_hay_servidor_instalado_SQL_NORMAL()
         {

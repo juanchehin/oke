@@ -237,7 +237,7 @@
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(310, 135);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "alter databaseoke set single_user with rollback immediate \nDROP DATABASE oke";
+            this.txtEliminarBase.Text = "alter database oke set single_user with rollback immediate \nDROP DATABASE oke";
             // 
             // lblRutaInstancia
             // 

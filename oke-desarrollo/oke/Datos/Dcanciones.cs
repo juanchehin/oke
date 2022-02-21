@@ -169,9 +169,7 @@ namespace oke.Datos
 			}
 			catch (Exception ex)
 			{
-
 				return false;
-
 			}
 
 		}

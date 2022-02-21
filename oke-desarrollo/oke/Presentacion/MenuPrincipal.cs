@@ -91,6 +91,9 @@ namespace oke.Presentacion
         private void validarConexion()
         {
             Dcanciones funcion = new Dcanciones();
+            Console.WriteLine("Validar conexion es : ");
+            Console.WriteLine(funcion.ValidarConexion().ToString());
+            Console.WriteLine("Fin Validar conexion es : ");
             if (funcion.ValidarConexion() == true)
             {
                 contarCanciones();
@@ -104,8 +107,6 @@ namespace oke.Presentacion
                     insertarIp();
                     timerPedidos.Enabled = true;
                 }
-
-
             }
             else
             {
