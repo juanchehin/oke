@@ -385,5 +385,18 @@ namespace oke.Presentacion.AsistenteInstalacion
 
             }
         }
+        private void Conectar()
+        {
+            if (btnInstalarServidor.Visible == true)
+            {
+                comprobar_si_ya_hay_servidor_instalado_SQL_NORMAL();
+            }
+        }
+        private void comprobar_si_ya_hay_servidor_instalado_SQL_NORMAL()
+        {
+            txtservidor.Text = ".";
+            ejecutar_scryt_ELIMINARBase_comprobacion_de_inicio();
+            ejecutar_scryt_crearBase_comprobacion_De_inicio();
+        }
     }
 }
