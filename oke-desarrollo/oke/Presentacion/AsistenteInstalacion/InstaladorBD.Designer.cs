@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstaladorBD));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelInstalandoServidor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -64,7 +64,7 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelInstalandoServidor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             this.GroupBox6.SuspendLayout();
@@ -83,15 +83,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // panelInstalandoServidor
             // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(198, 65);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(362, 345);
-            this.panel1.TabIndex = 1;
+            this.panelInstalandoServidor.Controls.Add(this.pictureBox2);
+            this.panelInstalandoServidor.Controls.Add(this.label2);
+            this.panelInstalandoServidor.Controls.Add(this.label1);
+            this.panelInstalandoServidor.Location = new System.Drawing.Point(198, 65);
+            this.panelInstalandoServidor.Name = "panelInstalandoServidor";
+            this.panelInstalandoServidor.Size = new System.Drawing.Size(362, 345);
+            this.panelInstalandoServidor.TabIndex = 1;
             // 
             // label1
             // 
@@ -153,7 +153,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(134, 20);
             this.txtusuario.TabIndex = 635;
-            this.txtusuario.Text = "oke";
+            this.txtusuario.Text = "okeSQL";
             // 
             // Label15
             // 
@@ -367,7 +367,7 @@
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(134, 20);
             this.lblcontraseña.TabIndex = 621;
-            this.lblcontraseña.Text = "oke369";
+            this.lblcontraseña.Text = "okeSQ12";
             // 
             // lblnombredeservicio
             // 
@@ -434,14 +434,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 687);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelInstalandoServidor);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InstaladorBD";
             this.Text = "InstaladorBD";
+            this.Load += new System.EventHandler(this.InstaladorBD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelInstalandoServidor.ResumeLayout(false);
+            this.panelInstalandoServidor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -458,7 +459,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelInstalandoServidor;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

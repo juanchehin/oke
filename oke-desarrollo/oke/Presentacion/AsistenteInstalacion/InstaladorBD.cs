@@ -16,5 +16,18 @@ namespace oke.Presentacion.AsistenteInstalacion
         {
             InitializeComponent();
         }
+
+        private void InstaladorBD_Load(object sender, EventArgs e)
+        {
+            centrarPaneles();
+        }
+
+        private void centrarPaneles()
+        {
+            panelInstalandoServidor.Location = new Point((Width - Panel2.Width) / 2, (Height - Panel2.Height) / 2);
+            Cursor = Cursors.WaitCursor;
+            //Panel4.Visible = false;
+            //Panel4.Dock = DockStyle.None;
+        }
     }
 }
