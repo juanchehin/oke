@@ -49,9 +49,11 @@ namespace oke.Presentacion
 
                 panelMesas.Dock = DockStyle.Fill;
                 panelContenedorMesas.Controls.Clear();
+
                 DataTable dt = new DataTable();
                 Dmesas funcion = new Dmesas();
                 funcion.MostrarMesas(ref dt);
+
                 foreach (DataRow rdr in dt.Rows)
                 {
                     Button b = new Button();
@@ -59,7 +61,7 @@ namespace oke.Presentacion
                     b.Name = rdr["IdMesa"].ToString();
                     b.Size = new Size(152, 121);
                     b.Font = new Font("Microsoft Sans Serif", 13);
-                    b.BackColor = Color.Transparent;
+                    b.BackColor = Color.Peru;
                     // b.BackgroundImage = Properties.Resources.verde;
                     b.BackgroundImageLayout = ImageLayout.Stretch;
                     b.FlatStyle = FlatStyle.Flat;

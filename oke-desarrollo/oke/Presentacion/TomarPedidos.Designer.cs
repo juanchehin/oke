@@ -35,6 +35,7 @@ namespace oke.Presentacion
             this.dataListado = new System.Windows.Forms.DataGridView();
             this.Pedir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnTest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,11 +47,11 @@ namespace oke.Presentacion
             this.btnPedirC = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSaludo = new System.Windows.Forms.RichTextBox();
-            this.ColumnTest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCanciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMesas.SuspendLayout();
+            this.panelContenedorMesas.SuspendLayout();
             this.panelSaludo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +117,13 @@ namespace oke.Presentacion
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Width = 49;
             // 
+            // ColumnTest
+            // 
+            this.ColumnTest.HeaderText = "ColumnTest";
+            this.ColumnTest.Name = "ColumnTest";
+            this.ColumnTest.ReadOnly = true;
+            this.ColumnTest.Width = 88;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -146,7 +154,6 @@ namespace oke.Presentacion
             // 
             // panelMesas
             // 
-            this.panelMesas.Controls.Add(this.label2);
             this.panelMesas.Controls.Add(this.panelContenedorMesas);
             this.panelMesas.Location = new System.Drawing.Point(905, 91);
             this.panelMesas.Name = "panelMesas";
@@ -157,7 +164,7 @@ namespace oke.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 11);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 25);
             this.label2.TabIndex = 0;
@@ -165,6 +172,8 @@ namespace oke.Presentacion
             // 
             // panelContenedorMesas
             // 
+            this.panelContenedorMesas.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelContenedorMesas.Controls.Add(this.label2);
             this.panelContenedorMesas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorMesas.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorMesas.Name = "panelContenedorMesas";
@@ -221,13 +230,6 @@ namespace oke.Presentacion
             this.txtSaludo.TabIndex = 0;
             this.txtSaludo.Text = "";
             // 
-            // ColumnTest
-            // 
-            this.ColumnTest.HeaderText = "ColumnTest";
-            this.ColumnTest.Name = "ColumnTest";
-            this.ColumnTest.ReadOnly = true;
-            this.ColumnTest.Width = 88;
-            // 
             // TomarPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,7 +246,8 @@ namespace oke.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMesas.ResumeLayout(false);
-            this.panelMesas.PerformLayout();
+            this.panelContenedorMesas.ResumeLayout(false);
+            this.panelContenedorMesas.PerformLayout();
             this.panelSaludo.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
