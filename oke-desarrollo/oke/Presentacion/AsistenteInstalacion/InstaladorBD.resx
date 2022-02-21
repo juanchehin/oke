@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOsAAADMCAYAAACSo1RbAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsEAAA7BAbiRa+0AAB4gSURBVHhe7d0JcBRV/gdwq6yy
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsAAAA7AAWrWiQkAAB4gSURBVHhe7d0JcBRV/gdwq6yy
         rLLKKqusrbJKRZEVXRflCCEEyEEgEI4A4T5CDu77iAISQINRDkFuUORygQVEkBBgBTlEjnCFcAVDQvDa
         VRHXa/NnOff9+xeZMGm+M9Mz83peT/ePqk8V+U3P8ev8XvpN93uv7xNCMMbCAAwyxqwHBhlj1gODjDHr
         gUHGmPXAIGPMemCQMWY9MMgYsx4YZIxZDwwyxqwHBhlj1gODjDHrgUHGmPXAIGPMemCQMWY9MKjKlQMr
@@ -256,7 +256,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1AAADdQB75G6FQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADaJSURBVHhe7d15
+        0wAADdMBvdUcagAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADaJSURBVHhe7d15
         sF5Vme/xZlDgFiZ46WtZRkS83KEcUnqtW16rrboNTpiGArqvrd3MaJgMAq1ICINgmgiRBJCIYBgDQss8
         xEQgGBmSEJB5CEOYMgGBhAQcCBD2fVbyHrPZ/hLOOWutvdfe6/vHp6rrKRtS717P73k4OWu/f1MUBbDG
         l//129uavc3R5kxzlZljnjNvmAJA8lyvup51vet62PWy62nX29uq3keeZBH5sED4rPmRud+oMAHQLa7X
@@ -492,6 +492,19 @@
         85x5w6gwAZAW16uuZ13vuh52vex62vU2396HnuJv/j+QWHNdhapEoAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
+    <value>CREATE LOGIN ada369 WITH PASSWORD = 'softwarereal'
+GO
+Use oke ;
+GO
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'oke')
+BEGIN
+    CREATE USER [oke] FOR LOGIN [oke]
+    EXEC sp_addrolemember N'db_owner', N'oke'
+    EXEC master..sp_addsrvrolemember @loginame = N'oke', @rolename = N'sysadmin'
+END;
+GO</value>
+  </data>
   <data name="txtArgumentosini.Text" xml:space="preserve">
     <value>;SQL Server 2014 Configuration File
 [OPTIONS]
@@ -711,7 +724,7 @@ ALTER DATABASE [oke] SET QUERY_STORE = OFF
 GO
 USE [oke]
 GO
-/****** Object:  Table [dbo].[Canciones]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  Table [dbo].[Canciones]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -725,7 +738,7 @@ CREATE TABLE [dbo].[Canciones](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Estaciones]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  Table [dbo].[Estaciones]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -740,7 +753,7 @@ CREATE TABLE [dbo].[Estaciones](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Mesas]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  Table [dbo].[Mesas]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -754,7 +767,7 @@ CREATE TABLE [dbo].[Mesas](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pedidos]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  Table [dbo].[Pedidos]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -771,7 +784,7 @@ CREATE TABLE [dbo].[Pedidos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -788,19 +801,13 @@ CREATE TABLE [dbo].[Usuarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Pedidos]  WITH CHECK ADD  CONSTRAINT [FK_Pedidos_Canciones] FOREIGN KEY([idCancion])
-REFERENCES [dbo].[Canciones] ([IdCancion])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[Pedidos] CHECK CONSTRAINT [FK_Pedidos_Canciones]
-GO
 ALTER TABLE [dbo].[Pedidos]  WITH CHECK ADD  CONSTRAINT [FK_Pedidos_Mesas] FOREIGN KEY([idMesa])
 REFERENCES [dbo].[Mesas] ([idMesa])
 ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[Pedidos] CHECK CONSTRAINT [FK_Pedidos_Mesas]
 GO
-/****** Object:  StoredProcedure [dbo].[buscar_canciones]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[buscar_canciones]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -812,7 +819,7 @@ select top 50 * from Canciones
 where Nombre Like '%' + @letra + '%'
 
 GO
-/****** Object:  StoredProcedure [dbo].[buscar_usuario]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[buscar_usuario]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -824,7 +831,7 @@ select * from Usuarios
 where Usuario LIKE '%' + @buscador + '%'
 
 GO
-/****** Object:  StoredProcedure [dbo].[editar_mesa]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[editar_mesa]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -840,7 +847,7 @@ update Mesas Set Mesa=@pMesa
 where idMesa=@pIdMesa
 
 GO
-/****** Object:  StoredProcedure [dbo].[editar_usuarios]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[editar_usuarios]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -859,7 +866,17 @@ update Usuarios set Usuario=@Usuario, Pass=@Pass,Icono=@Icono, Estado=@Estado
 where idusuario = @IdUsuario
 
 GO
-/****** Object:  StoredProcedure [dbo].[eliminar_canciones]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[EditarIp]    Script Date: 21/2/2022 16:45:15 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[EditarIp]
+@Ip varchar(max)
+as
+update Estaciones set Ip=@Ip 
+GO
+/****** Object:  StoredProcedure [dbo].[eliminar_canciones]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -871,7 +888,7 @@ delete from Canciones
 where IdCancion=@IdCancion
 
 GO
-/****** Object:  StoredProcedure [dbo].[eliminar_mesa]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[eliminar_mesa]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -882,7 +899,7 @@ as
 delete from Mesas where idMesa=idMesa
 
 GO
-/****** Object:  StoredProcedure [dbo].[eliminar_pedido]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[eliminar_pedido]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -893,7 +910,7 @@ as
 delete from Pedidos where idPedido = @IdPedido
 
 GO
-/****** Object:  StoredProcedure [dbo].[eliminar_todos_pedido]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[eliminar_todos_pedido]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -903,7 +920,7 @@ as
 delete from Pedidos
 
 GO
-/****** Object:  StoredProcedure [dbo].[eliminar_usuarios]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[eliminar_usuarios]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -914,7 +931,7 @@ as
 delete from Usuarios where idusuario = @Id_Usuario
 
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_canciones]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_canciones]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -929,7 +946,7 @@ insert into Canciones
 values(@Nombre)
 
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_mesa]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_mesa]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -943,7 +960,7 @@ else
 insert into Mesas values(@Mesa)
 
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_pedidos]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_pedidos]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -968,7 +985,7 @@ insert into Pedidos
 values(@IdMesa,@IdCancion,@Estado,@Mensaje)
 
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_usuario]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_usuario]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -986,7 +1003,7 @@ insert into Usuarios
 values(@Usuario,@Pass,@Icono,@Estado)
 
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarEstaciones]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[InsertarEstaciones]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1002,7 +1019,7 @@ insert into Estaciones
 values(@Ruta,@Ip)
 
 GO
-/****** Object:  StoredProcedure [dbo].[mostrar_usuarios]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[mostrar_usuarios]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1012,7 +1029,17 @@ as
 select * from Usuarios;
 
 GO
-/****** Object:  StoredProcedure [dbo].[mostrarCumpleanios]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[mostrarCodigoQR]    Script Date: 21/2/2022 16:45:15 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[mostrarCodigoQR]
+as
+select '|' + convert(varchar(max), Mesas.IdMesa)+'|'+Estaciones.Ip+'|' as IdmesaIp,Mesas.Mesa 
+from Mesas cross join Estaciones
+GO
+/****** Object:  StoredProcedure [dbo].[mostrarCumpleanios]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1024,7 +1051,7 @@ from Pedidos inner join Mesas on Mesas.IdMesa=Pedidos.IdMesa
 inner join Canciones on Canciones.IdCancion=Pedidos.IdCancion
  where Canciones.Nombre='!Happy Birthday!'
 GO
-/****** Object:  StoredProcedure [dbo].[mostrarPedidos]    Script Date: 21/2/2022 15:20:38 ******/
+/****** Object:  StoredProcedure [dbo].[mostrarPedidos]    Script Date: 21/2/2022 16:45:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1039,19 +1066,6 @@ GO
 USE [master]
 GO
 ALTER DATABASE [oke] SET  READ_WRITE 
-GO</value>
-  </data>
-  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
-    <value>CREATE LOGIN ada369 WITH PASSWORD = 'softwarereal'
-GO
-Use oke ;
-GO
-IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'oke')
-BEGIN
-    CREATE USER [oke] FOR LOGIN [oke]
-    EXEC sp_addrolemember N'db_owner', N'oke'
-    EXEC master..sp_addsrvrolemember @loginame = N'oke', @rolename = N'sysadmin'
-END;
 GO</value>
   </data>
   <metadata name="TimerCRARINI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
