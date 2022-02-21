@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstaladorBD));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelInstalandoServidor = new System.Windows.Forms.Panel();
@@ -63,6 +64,10 @@
             this.lblBasededatos = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
+            this.TimerCRARINI = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelInstalandoServidor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -492,5 +497,9 @@
         internal System.Windows.Forms.Label lblBasededatos;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label8;
+        private System.Windows.Forms.Timer TimerCRARINI;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
     }
 }

@@ -54,6 +54,8 @@
     <Compile Include="Datos\Dmesas.cs" />
     <Compile Include="Datos\Dpedidos.cs" />
     <Compile Include="Logica\Bases.cs" />
+    <Compile Include="Logica\Desencriptacion.cs" />
+    <Compile Include="Logica\Encriptacion.cs" />
     <Compile Include="Logica\Lcanciones.cs" />
     <Compile Include="Logica\Lestaciones.cs" />
     <Compile Include="Logica\Lmesas.cs" />
