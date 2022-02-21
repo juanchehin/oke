@@ -34,9 +34,6 @@ namespace oke.Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCantPedidos = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.btnRespaldarBD = new System.Windows.Forms.Button();
-            this.btnRestaurarBD = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMesas = new System.Windows.Forms.Button();
             this.btnGenerarQR = new System.Windows.Forms.Button();
@@ -62,9 +59,6 @@ namespace oke.Presentacion
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.panel1.Controls.Add(this.lblCantPedidos);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.btnUsuarios);
-            this.panel1.Controls.Add(this.btnRespaldarBD);
-            this.panel1.Controls.Add(this.btnRestaurarBD);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnMesas);
             this.panel1.Controls.Add(this.btnGenerarQR);
@@ -96,57 +90,6 @@ namespace oke.Presentacion
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(73, 100);
             this.panel5.TabIndex = 10;
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Location = new System.Drawing.Point(35, 423);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(180, 43);
-            this.btnUsuarios.TabIndex = 9;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // btnRespaldarBD
-            // 
-            this.btnRespaldarBD.BackColor = System.Drawing.Color.Transparent;
-            this.btnRespaldarBD.FlatAppearance.BorderSize = 0;
-            this.btnRespaldarBD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRespaldarBD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRespaldarBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRespaldarBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRespaldarBD.ForeColor = System.Drawing.Color.White;
-            this.btnRespaldarBD.Location = new System.Drawing.Point(35, 472);
-            this.btnRespaldarBD.Name = "btnRespaldarBD";
-            this.btnRespaldarBD.Size = new System.Drawing.Size(180, 43);
-            this.btnRespaldarBD.TabIndex = 8;
-            this.btnRespaldarBD.Text = "Respaldar BD";
-            this.btnRespaldarBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRespaldarBD.UseVisualStyleBackColor = false;
-            // 
-            // btnRestaurarBD
-            // 
-            this.btnRestaurarBD.BackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurarBD.FlatAppearance.BorderSize = 0;
-            this.btnRestaurarBD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurarBD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRestaurarBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestaurarBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestaurarBD.ForeColor = System.Drawing.Color.White;
-            this.btnRestaurarBD.Location = new System.Drawing.Point(35, 521);
-            this.btnRestaurarBD.Name = "btnRestaurarBD";
-            this.btnRestaurarBD.Size = new System.Drawing.Size(180, 33);
-            this.btnRestaurarBD.TabIndex = 7;
-            this.btnRestaurarBD.Text = "Restaurar BD";
-            this.btnRestaurarBD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRestaurarBD.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -355,9 +298,6 @@ namespace oke.Presentacion
         private System.Windows.Forms.Button btnPedir;
         private System.Windows.Forms.Button btnCatalogo;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnRespaldarBD;
-        private System.Windows.Forms.Button btnRestaurarBD;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCantPedidos;
         private System.Windows.Forms.Timer timerPedidos;
