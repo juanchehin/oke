@@ -155,6 +155,26 @@ namespace oke.Datos
 				ConexionMaestra.cerrar();
 			}
 		}
+		public bool ValidarConexion()
+		{
+			try
+			{
+				DataTable dt = new DataTable();
+				ConexionMaestra.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("select top 1 * from Canciones", ConexionMaestra.conectar);
+				da.Fill(dt);
+				ConexionMaestra.cerrar();
+				return true;
+
+			}
+			catch (Exception ex)
+			{
+
+				return false;
+
+			}
+
+		}
 
 	}
 }
