@@ -58,6 +58,12 @@
     <Compile Include="Logica\Lestaciones.cs" />
     <Compile Include="Logica\Lmesas.cs" />
     <Compile Include="Logica\Lpedidos.cs" />
+    <Compile Include="Presentacion\AsistenteInstalacion\InstaladorBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteInstalacion\InstaladorBD.Designer.cs">
+      <DependentUpon>InstaladorBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Catalogo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AsistenteInstalacion\InstaladorBD.resx">
+      <DependentUpon>InstaladorBD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Catalogo.resx">
       <DependentUpon>Catalogo.cs</DependentUpon>
     </EmbeddedResource>
