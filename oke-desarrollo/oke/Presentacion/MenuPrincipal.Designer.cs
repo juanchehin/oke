@@ -87,7 +87,7 @@ namespace oke.Presentacion
             this.lblCantPedidos.Name = "lblCantPedidos";
             this.lblCantPedidos.Size = new System.Drawing.Size(23, 25);
             this.lblCantPedidos.TabIndex = 11;
-            this.lblCantPedidos.Text = "1";
+            this.lblCantPedidos.Text = "0";
             // 
             // panel5
             // 
@@ -328,6 +328,7 @@ namespace oke.Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Oke";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

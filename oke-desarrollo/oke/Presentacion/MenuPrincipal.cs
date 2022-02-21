@@ -1,5 +1,7 @@
 ﻿using oke.Datos;
+using oke.Logica;
 using oke.Presentacion;
+using oke.Presentacion.AsistenteInstalacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +19,12 @@ namespace oke.Presentacion
         {
             InitializeComponent();
         }
+        int TotalCanciones;
 
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            validarConexion();
+        }
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
             panelPadre.Controls.Clear();
@@ -80,5 +87,52 @@ namespace oke.Presentacion
             panelPadre.Controls.Add(control);
             // SeleccionarButton(sender);
         }
+
+        private void validarConexion()
+        {
+            Dcanciones funcion = new Dcanciones();
+            if (funcion.ValidarConexion() == true)
+            {
+                contarCanciones();
+                if (TotalCanciones > 0)
+                {
+                    timerPedidos.Enabled = true;
+                }
+                else
+                {
+                    InsertarCancionFcumple();
+                    insertarIp();
+                    timerPedidos.Enabled = true;
+                }
+
+
+            }
+            else
+            {
+                Dispose();
+                InstaladorBD frm = new InstaladorBD();
+                frm.ShowDialog();
+            }
+        }
+
+        private void contarCanciones()
+        {
+            Dcanciones funcion = new Dcanciones();
+            funcion.TotalCanciones(ref TotalCanciones);
+        }
+        private void InsertarCancionFcumple()
+        {
+            Lcanciones parametros = new Lcanciones();
+            Dcanciones funcion = new Dcanciones();
+            parametros.Nombre = "!Happy Birthday!";
+            funcion.insertar_Canciones(parametros);
+
+        }
+        private void insertarIp()
+        {
+            Destaciones funcion = new Destaciones();
+            funcion.InsertarEstaciones();
+        }
+
     }
 }
