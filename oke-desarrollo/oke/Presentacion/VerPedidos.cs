@@ -387,5 +387,14 @@ namespace oke.Presentacion
                 MostrarPedidos();
             }
         }
+
+        private void btnEliminarTodo_Click_1(object sender, EventArgs e)
+        {
+            EliminarPedidosTodos();
+            MenuPrincipal funcion = new MenuPrincipal();
+            funcion.ContarPedidos();
+
+            //MenuPrincipal.ContarPedidos();
+        }
     }
 }

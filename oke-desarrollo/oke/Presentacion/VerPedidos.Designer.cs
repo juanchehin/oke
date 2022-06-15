@@ -63,6 +63,7 @@ namespace oke.Presentacion
             this.btnEliminarTodo.TabIndex = 0;
             this.btnEliminarTodo.Text = "Eliminar todo";
             this.btnEliminarTodo.UseVisualStyleBackColor = true;
+            this.btnEliminarTodo.Click += new System.EventHandler(this.btnEliminarTodo_Click_1);
             // 
             // PanelPedidos
             // 

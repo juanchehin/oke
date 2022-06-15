@@ -55,7 +55,7 @@ namespace oke.Presentacion
             ContarPedidos();
         }
 
-        private void ContarPedidos()
+        public void ContarPedidos()
         {
             int ContadorPedidos = 0;
             Dpedidos funcion = new Dpedidos();
@@ -63,6 +63,7 @@ namespace oke.Presentacion
             if (ContadorPedidos == 0)
             {
                 // panelCantPedidos.Visible = false;
+                lblCantPedidos.Text = "0";
             }
             else
             {
